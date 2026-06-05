@@ -3,7 +3,7 @@
 @desc python helloworld 案例
 @date 2026/6/5 16:20
 
-搭建python环境
+搭建 python 环境
 
 1. 下载 python https://www.python.org/ftp/python/ 或 https://www.python.org/downloads/
 2. 安装 python 解释器
@@ -18,6 +18,8 @@
     pip config list #
 7. python2和python3区别?
     python2默认不支持中文，python3默认支持中文
+8. python 经典教程
+    https://liaoxuefeng.com/books/python/introduction/index.html
 """
 
 print("hello world!")
