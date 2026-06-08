@@ -10,3 +10,12 @@
 2. 推荐蛇形命名风格 snake_case
 3. 不要使用关键字做为标识符名，会报错
 """
+
+# snake_case 命令示例
+user_name = "zhangsan"
+user_age = 24
+is_login_success = True
+
+print(user_name)
+print(user_age)
+print(is_login_success)
