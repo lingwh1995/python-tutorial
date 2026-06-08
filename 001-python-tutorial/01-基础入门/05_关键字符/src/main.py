@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-@author think
+@author lingwh
 @desc python 中的关键字
 @date 2026/6/5 17:32
 

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-@author think
+@author lingwh
 @desc python 中的标准输入
 @date 2026/6/8 14:46
 

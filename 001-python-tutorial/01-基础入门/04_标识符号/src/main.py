@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-@author think
+@author lingwh
 @desc python 中的标识符号
 @date 2026/6/5 17:28
 
