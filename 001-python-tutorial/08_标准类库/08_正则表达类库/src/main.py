@@ -12,7 +12,6 @@ def re_lib_test() :
     # 提取数字 ['123','45']
     res = re.findall(r"\d+", "abc123def45")
     print(res)
-
     # 替换 → bbb
     s = 'aaa'
     re.sub("a", "b", s)

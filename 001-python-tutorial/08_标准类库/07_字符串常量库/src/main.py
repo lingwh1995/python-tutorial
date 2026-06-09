@@ -12,11 +12,9 @@ def string_lib_test() :
     # 大小写英文字母常量
     ascii_letters = string.ascii_letters
     print(ascii_letters)
-
     # 数字0-9常量
     digits = string.digits
     print(digits)
-
     # 所有标点符号常量
     punctuation = string.punctuation
     print(punctuation)

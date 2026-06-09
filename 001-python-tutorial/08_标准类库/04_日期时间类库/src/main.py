@@ -12,7 +12,6 @@ def datetime_lib_test() :
     # 当前时间
     now = datetime.now()
     print(now.year, now.month, now.day)
-
     # 格式化输出
     now_format = now.strftime("%Y-%m-%d %H:%M:%S")
     print(now_format)
