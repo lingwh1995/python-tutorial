@@ -43,7 +43,7 @@
 """
 
 
-# 定义变量
+# 定义变量 - 普通
 a = 1
 b = 3.14
 c = 'Hello Python!'
@@ -54,7 +54,18 @@ e = '''三个单引号包裹'''
 f = """三个双引号包裹"""
 g = True
 
-# 打印变量
+# 定义变量 - 高级
+sql = """
+select 
+    *
+from 
+    emp
+where 
+    emp.name = 'zhangsan'
+"""
+x, y = 10, 20
+
+# 打印变量 - 普通
 print(a)
 print(b)
 print(c)
@@ -62,6 +73,10 @@ print(d)
 print(e)
 print(f)
 print(g)
+
+# 打印变量 - 高级
+print(sql)
+print(x, y)
 
 # 使用type()判断变量类型
 print(type(a))
