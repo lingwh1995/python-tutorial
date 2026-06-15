@@ -25,6 +25,9 @@
      If the implementation is easy to explain, it may be a good idea.
      Namespaces are one honking great idea -- let's do more of those!
 2. 遵循 pythonic 风格，用 python 原生语法，贴近自然英文，少循环少临时变量，代码短、可读性强
+3. 遵循 PEP 8 规范
+     英文 https://peps.python.org/pep-0008/
+     中文 https://peps.pythonlang.cn/pep-0008/
 """
 
 import this
