@@ -4,7 +4,7 @@
 @desc python 中的格式化输出
 @date 2026/6/5 17:37
 
-python 中的格式化输出
+一、python 中的格式化输出
 
 1. % 占位符输出 ⭐⭐⭐
      语法格式
@@ -25,8 +25,11 @@ python 中的格式化输出
 4. format_map 输出 ⭐
      应用场景
        适合批量字典数据
+5. end 处理换行
+     换行 printf() / printf(end='\n')
+     不换 printf(end='')
 
-常用格式符号速查表
+二、常用格式符号速查表
 
 符号	        作用	        示例
 :d	        十进制整数	f"{5:d}"
@@ -36,8 +39,9 @@ python 中的格式化输出
 <	        左对齐	    {x:<8}
 >	        右对齐	    {x:>8}
 ^	        居中	        {x:^8}
-0	        数字补零	    {3:05d} →00003
+0	        数字补零	    {3:05d} → 00003
 """
+
 
 # 1.1. 使用占位符输出一个值
 age = 20
@@ -117,14 +121,12 @@ print('使用str.format输出: 姓名: {}, 年龄: {}, 分数: {}'.format(name, 
 print('使用str.format输出: 年龄: {1}, 姓名: {0}, 分数: {2}'.format(name, age, score))
 # 关键字传参
 print('使用str.format输出: 姓名: {n}, 年龄: {a}, 分数: {s}'.format(n=name, a=age, s=score))
-
+# 调用方法
 name = 'lisi'
 num = 3.1415926
-# 调用方法
 print("姓名大写：{}".format(name.upper()))       # 写法1：参数处提前调用方法（最常用）
 print("姓名大写：{0.upper}".format(name))      # 写法2：用索引链式调用 .
 print("姓名大写：{n.upper}".format(n=name))    # 写法3：关键字链式调用
-
 # 保留2位小数
 print("π = {:.2f}".format(num))
 # 占8字符宽度，居中、补0
@@ -136,3 +138,14 @@ print('-' * 50)
 # 4. 使用 format_map 输出
 user = {"name": "lisi", "age": 28, "score": 92}
 print("姓名:{name}, 年龄:{age}, 分数:{score}".format_map(user))
+
+# 5. 使用 end 处理换行
+# 换行
+print('hello')
+print('world')
+# 不换行
+print('hello', end='')
+print('world')
+# 使用 # 换行
+print('hello', end='#')
+print('world')

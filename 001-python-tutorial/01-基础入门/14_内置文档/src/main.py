@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-@author think
+@author lingwh
 @desc python 中的文档支持/pydoc
 @date 2026/6/15 9:39
 
@@ -34,12 +34,10 @@ import math
 pydoc.help(math.sqrt)
 print('-' * 20)
 
-
 # 简单写法
 #help(math)
 pydoc.help(math.sqrt)
 print('-' * 20)
-
 
 # 使用pydoc支持的格式进行注释 - 单行注释
 def add(a, b):
@@ -64,7 +62,6 @@ def calc_area(radius):
 pydoc.help(add)
 pydoc.help(calc_area)
 print('-' * 20)
-
 
 # 使用 pydoc 查看自定义函数的文档 - 简单写法
 help(add)
