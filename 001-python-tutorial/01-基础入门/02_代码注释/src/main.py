@@ -7,7 +7,7 @@
 
 # 1. 单行注释: # + 空格 + 注释 ⭐⭐⭐⭐⭐
 # python hello world示例程序！
-print("hello world!")
+print('hello world!')
 print('-' * 20)
 
 # 2. 多行注释
@@ -16,7 +16,7 @@ print('-' * 20)
 # 我是多行注释第二行......
 # 我是多行注释第三行......
 # 格式: 三个开始位置三个单引号，结束位置三个单引号，中间为注释内容
-print("hello world!")
+print('hello world!')
 
 # 2.2. 多行注释第二种: 一对英文状态下三个单引号 ⭐
 '''
@@ -25,7 +25,7 @@ print("hello world!")
 我是多行注释第三行......
 格式: 开始位置三个单引号，结束位置三个单引号，中间为注释内容
 '''
-print("hello world!")
+print('hello world!')
 
 # 2.3. 多行注释第三种: 一对英文状态下三个双引号 ⭐⭐⭐⭐⭐
 """
@@ -34,5 +34,5 @@ print("hello world!")
 我是多行注释第三行......
 格式: 开始位置三个双引号，结束位置三个双引号，中间为注释内容
 """
-print("hello world!")
+print('hello world!')
 print('-' * 20)

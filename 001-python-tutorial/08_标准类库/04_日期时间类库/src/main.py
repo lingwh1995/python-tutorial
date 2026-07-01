@@ -13,10 +13,10 @@ def datetime_lib_test() :
     now = datetime.now()
     print(now.year, now.month, now.day)
     # 格式化输出
-    now_format = now.strftime("%Y-%m-%d %H:%M:%S")
+    now_format = now.strftime('%Y-%m-%d %H:%M:%S')
     print(now_format)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     datetime_lib_test()
 

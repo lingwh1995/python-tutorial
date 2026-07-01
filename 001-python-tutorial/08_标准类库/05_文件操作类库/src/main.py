@@ -13,14 +13,14 @@ def os_lib_test() :
     wd = os.getcwd()
     print(wd)
     # 列出文件夹所有文件
-    dirs = os.listdir("./")
+    dirs = os.listdir('./')
     print(dirs)
     # 新建文件夹
     # os.mkdir("test")
     # 判断文件是否存在
-    exist = os.path.exists("a.txt")
+    exist = os.path.exists('a.txt')
     print(exist)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     os_lib_test()

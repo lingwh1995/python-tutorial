@@ -37,12 +37,12 @@ a, b = 10, 20
 tmp = a
 a = b
 b = tmp
-print("a = %d, b = %d" % (a, b))
+print('a = %d, b = %d' % (a, b))
 
 # Pythonic：直接用元组解包
 a, b = 10, 20
 a, b = b, a
-print("a = %d, b = %d" % (a, b))
+print('a = %d, b = %d' % (a, b))
 print('-' * 20)
 
 # 2. 同时获取索引和值
@@ -96,11 +96,11 @@ print('-' * 20)
 items = []
 # 非 Pythonic：显式检查长度
 if len(items) == 0:
-    print("没有数据")
+    print('没有数据')
 
 # Pythonic：利用空序列的布尔特性
 if not items:
-    print("没有数据")
+    print('没有数据')
 print('-' * 20)
 
 # 7. 多列表同时遍历

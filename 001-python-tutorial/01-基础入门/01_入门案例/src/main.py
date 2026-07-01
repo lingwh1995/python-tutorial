@@ -15,7 +15,7 @@
      pip config set global.index-url http://mirrors.aliyun.com/pypi/simple/
      pip config set install.trusted-host mirrors.aliyun.com
 6. 查看 pip 镜像配置
-     pip config list #
+     pip config list
 7. python2和python3区别?
      python2默认不支持中文，python3默认支持中文
 8. python 经典教程
@@ -23,4 +23,4 @@
 """
 
 
-print("hello world!")
+print('hello world!')

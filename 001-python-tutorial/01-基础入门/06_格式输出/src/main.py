@@ -80,29 +80,29 @@ print(f'使用f-string输出: 姓名: {name}, 年龄: {age}, 分数: {score}')
 f_string_rt = f'使用f-string输出: 姓名: {name}, 年龄: {age}, 分数: {score}'
 print('f_string返回值: %s' % f_string_rt)
 # 直接运算
-print(f"五年后年龄：{age + 5}")
+print(f'五年后年龄：{age + 5}')
 # 调用方法
-print(f"姓名大写：{name.upper()}")
+print(f'姓名大写：{name.upper()}')
 # 精细格式控制（和 format 格式符通用）
 pi = 3.14159
 money = 99999.99
 # .3f 以浮点数输出，四舍五入后保留三位小数
-print(f"圆周率：{pi:.3f}")
+print(f'圆周率：{pi:.3f}')
 # .1% 以百分比输出，四舍五入后保留1位小数（乘以100后保留n位小数）
-print(f"通过率：{0.8658:.1%}")
+print(f'通过率：{0.8658:.1%}')
 # 整数千位分隔
-print("整数千位分隔:{:,}".format(1234567))
+print('整数千位分隔:{:,}'.format(1234567))
 # 整数千位分隔 + 小数四舍五入后保留两位
-print(f"整数千位分隔 + 小数四舍五入后保留两位：{money:,.2f}")
+print(f'整数千位分隔 + 小数四舍五入后保留两位：{money:,.2f}')
 # 对齐填充：宽度10，左/右/居中
-print(f"姓名|{name:<10}|")  # 左对齐
-print(f"姓名|{name:>10}|")  # 右对齐
-print(f"姓名|{name:^10}|")  # 居中
+print(f'姓名|{name:<10}|')  # 左对齐
+print(f'姓名|{name:>10}|')  # 右对齐
+print(f'姓名|{name:^10}|')  # 居中
 # 补0数字
-print(f"编号：{6:04d}")
+print(f'编号：{6:04d}')
 # 二进制 / 十六进制
 n = 10
-print(f"二进制:{n:b}, 十六进制:{n:x}, 大写:{n:X}")
+print(f'二进制:{n:b}, 十六进制:{n:x}, 大写:{n:X}')
 # 格式化打印多行
 name = '小明'
 info = f"""
@@ -124,20 +124,20 @@ print('使用str.format输出: 姓名: {n}, 年龄: {a}, 分数: {s}'.format(n=n
 # 调用方法
 name = 'lisi'
 num = 3.1415926
-print("姓名大写：{}".format(name.upper()))       # 写法1：参数处提前调用方法（最常用）
-print("姓名大写：{0.upper}".format(name))      # 写法2：用索引链式调用 .
-print("姓名大写：{n.upper}".format(n=name))    # 写法3：关键字链式调用
+print('姓名大写：{}'.format(name.upper()))       # 写法1：参数处提前调用方法（最常用）
+print('姓名大写：{0.upper}'.format(name))      # 写法2：用索引链式调用 .
+print('姓名大写：{n.upper}'.format(n=name))    # 写法3：关键字链式调用
 # 保留2位小数
-print("π = {:.2f}".format(num))
+print('π = {:.2f}'.format(num))
 # 占8字符宽度，居中、补0
-print("数字:{:0^8.2f}".format(num))
+print('数字:{:0^8.2f}'.format(num))
 # 整数千位分隔
-print("金额:{:,}".format(1234567))
+print('金额:{:,}'.format(1234567))
 print('-' * 50)
 
 # 4. 使用 format_map 输出
-user = {"name": "lisi", "age": 28, "score": 92}
-print("姓名:{name}, 年龄:{age}, 分数:{score}".format_map(user))
+user = {'name': 'lisi', 'age': 28, 'score': 92}
+print('姓名:{name}, 年龄:{age}, 分数:{score}'.format_map(user))
 
 # 5. 使用 end 处理换行
 # 换行

@@ -20,7 +20,7 @@ def string_lib_test() :
     print(punctuation)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     string_lib_test()
 
 

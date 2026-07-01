@@ -26,5 +26,5 @@ b = 20
 print('第二步：计算两数之和')
 sum_num = a + b
 
-print("第三步：输出结果")
+print('第三步：输出结果')
 print(f'{a} + {b} = {sum_num}')

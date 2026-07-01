@@ -28,5 +28,5 @@ def math_lib_test() :
     print(math.log(10))
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     math_lib_test()

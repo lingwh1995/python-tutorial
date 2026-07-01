@@ -26,5 +26,5 @@ def random_lib_test() :
     print(nums)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     random_lib_test()

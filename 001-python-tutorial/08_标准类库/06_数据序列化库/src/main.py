@@ -9,7 +9,7 @@ import json
 
 
 def json_lib_test() :
-    user_dict = {"name":"小明", "age":18}
+    user_dict = {'name':'小明', 'age':18}
     print(user_dict)
     # 字典转json字符串
     user_json = json.dumps(user_dict)
@@ -19,5 +19,5 @@ def json_lib_test() :
     print(user_dict)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     json_lib_test()

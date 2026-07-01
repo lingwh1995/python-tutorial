@@ -242,10 +242,10 @@ mem_after = get_rss_mb()
 
 # 统计结果
 print('列表推导式 与 生成器表达式 开始统计结果......')
-print(f"运行时长：{t_end - t_start:.2f} s")
-print(f"运行前内存：{mem_before} MB")
-print(f"运行后内存：{mem_after} MB")
-print(f"内存增加：{mem_after - mem_before} MB")
+print(f'运行时长：{t_end - t_start:.2f} s')
+print(f'运行前内存：{mem_before} MB')
+print(f'运行后内存：{mem_after} MB')
+print(f'内存增加：{mem_after - mem_before} MB')
 print('-' * 20)
 
 

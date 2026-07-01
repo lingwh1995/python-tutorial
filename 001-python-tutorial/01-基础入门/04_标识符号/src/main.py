@@ -13,7 +13,7 @@
 
 
 # snake_case 命令示例
-user_name = "zhangsan"
+user_name = 'zhangsan'
 user_age = 24
 is_login_success = True
 
