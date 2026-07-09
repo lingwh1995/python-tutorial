@@ -13,21 +13,24 @@ else:
 print('-' * 20)
 
 # 基础逻辑运算
-# and（逻辑与） - 全真才真，一假则假
+# and（逻辑与，并且的意思，会短路） - 全真才真，一假则假
+a, b = 10, 3
+print(a > 5 and b <= 3)
 print(True and True)
 print(True and False)
 print(False and True)
 print(False and False)
 print('-' * 20)
-# or （逻辑或） - 一真就真，全假才假
+# or （逻辑或，或者的意思，会短路） - 一真就真，全假才假
 print(True or True)
 print(True or False)
 print(False or True)
 print(False or False)
 print('-' * 20)
-# not（逻辑非） - 真假反转
+# not（逻辑非，取反的意思，无短路） - 真假反转
 print(not True)
 print(not False)
+print(not not False) # 同一个值，偶数次取反，该数字值不变
 print('-' * 20)
 
 # 运算优先级 - 逻辑运算符的优先级从高到低为 not > and > or
