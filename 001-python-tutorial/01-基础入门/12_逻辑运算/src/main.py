@@ -58,13 +58,9 @@ print('-' * 20)
 0 or print('0 or  这行代码会被执行')
 print('-' * 20)
 
-# python 独有链式写法，等价于 18 <= age and age < 30
-age = 20
-print(18 <= age < 30)
-
 # or 可以用来提供默认值，如果用户没有输入名字，使用 匿名用户 作为默认值
-name = input('请输入你的名字：') or '匿名用户'
-print(f"你好，{name}")
+# name = input('请输入你的名字：') or '匿名用户'
+# print(f"你好，{name}")
 
 # 如果列表为空，使用默认列表
 my_list = []
