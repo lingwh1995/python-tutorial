@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-"""
-@author lingwh
-@desc python 中的字符串切片
-@date 2026/7/1 14:59
+"""python 中的字符串切片
+
+:author: lingwh
+:date: 2026/7/1 14:59
 """
 
 

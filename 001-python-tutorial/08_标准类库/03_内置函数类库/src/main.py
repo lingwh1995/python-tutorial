@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-"""
-@author lingwh
-@desc python 中的内置类库
-@date 2026/6/8 16:30
+"""python 中的内置类库
+
+:author: lingwh
+:date: 2026/6/8 16:30
 """
 
 

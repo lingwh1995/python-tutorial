@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-"""
-@author think
-@desc python 中的文件操作类库
-@date 2026/6/8 17:46
+"""python 中的文件操作类库
+
+:author: lingwh
+:date: 2026/6/8 17:46
 """
 
 import os

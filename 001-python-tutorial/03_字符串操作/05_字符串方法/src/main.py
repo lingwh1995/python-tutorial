@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-"""
-@author lingwh
-@desc Python 字符串常用方法（教学版）
-@date 2026/7/1 15:30
+"""python 字符串常用方法
+
+:author: lingwh
+:date: 2026/7/1 15:30
 """
 
 

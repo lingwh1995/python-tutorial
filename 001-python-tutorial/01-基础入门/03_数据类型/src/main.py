@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-@author lingwh
-@desc python 数据类型
-@date 2026/6/5 17:02
+"""python 数据类型
 
 1. 定义变量和使用变量
      格式: 变量名 = 值
@@ -37,9 +34,12 @@
        set
          s = {1,2,3,3}  # 自动去重 {1,2,3}
      自定义类型
-       class
+        class
 3. 判断变量类型
      type(变量)
+
+:author: lingwh
+:date: 2026/6/5 17:02
 """
 
 

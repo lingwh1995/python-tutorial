@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-"""
-@author think
-@desc python 中的时间休眠类库
-@date 2026/6/9 10:56
+"""python 中的时间休眠类库
+
+:author: lingwh
+:date: 2026/6/9 10:56
 """
 
 import time

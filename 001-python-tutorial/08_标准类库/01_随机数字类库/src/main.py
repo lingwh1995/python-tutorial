@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-"""
-@author lingwh
-@desc python 中的随机数类库
-@date 2026/6/8 17:32
+"""python 中的随机数类库
+
+:author: lingwh
+:date: 2026/6/8 17:32
 """
 
 import random

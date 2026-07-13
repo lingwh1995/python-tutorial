@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-"""
-@author think
-@desc python 中的正则表达式类库
-@date 2026/6/9 10:52
+"""python 中的正则表达式类库
+
+:author: lingwh
+:date: 2026/6/9 10:52
 """
 
 import re

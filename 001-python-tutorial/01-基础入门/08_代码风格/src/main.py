@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-@author lingwh
-@desc python 代码风格
-@date 2026/6/5 17:57
+"""python 代码风格
 
 1. 遵循 python 之禅
      Beautiful is better than ugly.
@@ -28,6 +25,9 @@
 3. 遵循 PEP 8 规范
      英文 https://peps.python.org/pep-0008/
      中文 https://peps.pythonlang.cn/pep-0008/
+
+:author: lingwh
+:date: 2026/6/5 17:57
 """
 
 

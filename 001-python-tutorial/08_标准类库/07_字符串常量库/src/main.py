@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-"""
-@author think
-@desc python 中的字符串常量库
-@date 2026/6/9 10:49
+"""python 中的字符串常量库
+
+:author: lingwh
+:date: 2026/6/9 10:49
 """
 
 import string

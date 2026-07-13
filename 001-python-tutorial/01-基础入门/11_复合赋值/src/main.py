@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-"""
-@author lingwh
-@desc python 中的复合赋值
-@date 2026/6/8 16:14
+"""python 中的复合赋值
+
+:author: lingwh
+:date: 2026/6/8 16:14
 """
 
 

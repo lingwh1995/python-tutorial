@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-"""
-@author lingwh
-@desc python 中的变量交换/两数交换/两字符串交换
-@date 2026/6/14 20:38
+"""python 中的变量交换/两数交换/两字符串交换
+
+:author: lingwh
+:date: 2026/6/14 20:38
 """
 
 

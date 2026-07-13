@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-"""
-@author lingwh
-@desc python 中的算数运算符
-@date 2026/6/8 16:06
+"""python 中的算数运算符
+
+:author: lingwh
+:date: 2026/6/8 16:06
 """
 
 

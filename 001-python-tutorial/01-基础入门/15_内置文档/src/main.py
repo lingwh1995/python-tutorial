@@ -1,10 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-@author lingwh
-@desc python 中的文档支持/pydoc
-@date 2026/6/15 9:39
-
-python 内置文档
+"""python 内置文档
 
 1. 在命令行中进行查看
      查看内置模块
@@ -23,6 +18,9 @@ python 内置文档
        python -m pydoc -w test pydoc -w test
      批量生成当前目录所有py文件html
        python -m pydoc -w . / pydoc -w .
+
+:author: lingwh
+:date: 2026/6/15 9:39
 """
 
 import pydoc

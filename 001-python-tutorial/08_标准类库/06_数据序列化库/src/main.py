@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-"""
-@author think
-@desc python 中的数据序列化类库
-@date 2026/6/8 17:50
+"""python 中的数据序列化类库
+
+:author: lingwh
+:date: 2026/6/8 17:50
 """
 
 import json

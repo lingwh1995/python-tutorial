@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
-"""
-@author lingwh
-@desc python 中的字符串基础
-@date 2026/7/1 14:02
+"""python 中的字符串基础
+
+定义字符串的几种方式
+
+:author: lingwh
+:date: 2026/7/1 14:02
 """
 
 # 定义字符串的几种方式

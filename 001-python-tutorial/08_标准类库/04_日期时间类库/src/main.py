@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-"""
-@author think
-@desc python 中的日期事件类库
-@date 2026/6/8 17:41
+"""python 中的日期事件类库
+
+:author: lingwh
+:date: 2026/6/8 17:41
 """
 
 from datetime import datetime,date

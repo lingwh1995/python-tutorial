@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-"""
-@author lingwh
-@desc python 中的字符串算法
-@date 2026/7/1 17:17
+"""python 中的字符串算法
+
+:author: lingwh
+:date: 2026/7/1 17:17
 """
 
 

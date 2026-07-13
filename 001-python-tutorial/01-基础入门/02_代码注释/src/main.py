@@ -1,7 +1,11 @@
-"""
-@author lingwh
-@desc python 中的三种代码注释
-@date 2026/6/5 16:43
+"""python 中的三种代码注释
+
+1. 文档注释
+2. 单行注释
+3. 多行注释
+
+:author: lingwh
+:date: 2026/6/5 16:43
 """
 
 

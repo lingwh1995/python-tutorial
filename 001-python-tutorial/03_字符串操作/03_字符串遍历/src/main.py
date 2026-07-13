@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-"""
-@author lingwh
-@desc python 中的字符串基础遍历
-@date 2026/7/1 14:02
+"""python 中的字符串基础遍历
+
+:author: lingwh
+:date: 2026/7/1 14:02
 """
 
 

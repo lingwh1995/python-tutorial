@@ -1,14 +1,12 @@
 # -*- coding: utf-8 -*-
-"""
-@author lingwh
-@desc python 中的关键字
-@date 2026/6/5 17:32
-
-python 中所有的关键字列表
+"""python 中的关键字
 
 ['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue',
 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in',
 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+
+:author: lingwh
+:date: 2026/6/5 17:32
 """
 
 import keyword

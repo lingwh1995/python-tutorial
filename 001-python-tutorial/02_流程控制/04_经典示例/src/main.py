@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-"""
-@author lingwh
-@desc python 实现石头剪刀布游戏
-@date 2026/7/1 11:44
+"""python 实现石头剪刀布游戏
+
+:author: lingwh
+:date: 2026/7/1 11:44
 """
 
 import random

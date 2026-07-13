@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-"""
-@author lingwh
-@desc python 中的逻辑运算
-@date 2026/6/22 18:13
+"""python 中的逻辑运算
+
+:author: lingwh
+:date: 2026/6/22 18:13
 """
 
 # 0为False，非0为True
