@@ -5,7 +5,7 @@
 
 1. 基础 if-else
 2. 多分支 if-elif-else
-3. 三元运算符（格式：值1 if 条件判断 else 值2）
+3. 三元/三目运算符（格式：值1 if 条件判断 else 值2）
 4. 多分支 match-case（等价于其他语言switch-case，但功能强于switch-case）
 
 二、流程控制完整体系（三大结构协作实现完整程序逻辑）
@@ -39,7 +39,10 @@ else:
     print('不及格')
 print('-' * 20)
 
-# 3. 三元运算符
+# 3. 三元/三目运算符
+# I will walk if it is sunny else take a bus. 天晴我就走路，不然坐公交
+res = 'walk' if sunny else 'bus'
+print(res)
 age = 16
 tip = '成年人' if age >= 18 else '未成年人'
 print(tip)
