@@ -8,7 +8,7 @@
 import json
 
 
-def json_lib_test() :
+def json_lib_test() -> None:
     user_dict = {'name':'小明', 'age':18}
     print(user_dict)
     # 字典转json字符串

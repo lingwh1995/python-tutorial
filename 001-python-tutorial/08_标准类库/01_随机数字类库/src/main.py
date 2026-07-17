@@ -8,7 +8,7 @@
 import random
 
 
-def random_lib_test() :
+def random_lib_test() -> None:
     # 使用随机函数生成0-1之间的随机浮点数
     f = random.random()
     print(f)

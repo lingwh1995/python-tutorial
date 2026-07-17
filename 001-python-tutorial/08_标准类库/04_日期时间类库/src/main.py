@@ -8,7 +8,7 @@
 from datetime import datetime,date
 
 
-def datetime_lib_test() :
+def datetime_lib_test() -> None:
     # 当前时间
     now = datetime.now()
     print(now.year, now.month, now.day)

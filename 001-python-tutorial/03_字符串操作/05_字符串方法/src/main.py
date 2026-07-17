@@ -20,7 +20,7 @@ s_align = 'python'
 s_spaced = '     python     '
 
 
-def show(title, result):
+def show(title, result) -> None:
     """
         统一输出格式，让输入和结果一目了然。
     """

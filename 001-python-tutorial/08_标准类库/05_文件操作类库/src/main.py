@@ -8,7 +8,7 @@
 import os
 
 
-def os_lib_test() :
+def os_lib_test() -> None:
     # 获取当前工作目录
     wd = os.getcwd()
     print(wd)

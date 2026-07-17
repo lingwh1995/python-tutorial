@@ -8,7 +8,7 @@
 import time
 
 
-def time_lib_test() :
+def time_lib_test() -> None:
     # 时间戳
     timestamp = time.time()
     print(timestamp)

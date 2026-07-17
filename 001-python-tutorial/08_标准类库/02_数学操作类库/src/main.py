@@ -8,7 +8,7 @@
 import math
 
 
-def math_lib_test() :
+def math_lib_test() -> None:
     # 圆周率
     print(math.pi)
 

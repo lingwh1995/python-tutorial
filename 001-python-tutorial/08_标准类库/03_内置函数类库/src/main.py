@@ -6,7 +6,7 @@
 """
 
 
-def builtins_lib_test():
+def builtins_lib_test() -> None:
     # 绝对值
     print(abs(-9))
 
