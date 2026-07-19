@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-"""python 中的循环结构。
+"""python 中的循环结构
 
 一、循环结构
 
 循环结构基础
-1. for 循环结构
-2. while 循环结构
+1. for 循环结构 - 适用于循环次数已知
+2. while 循环结构 - 适用于循环次数未知
 
 循环结构高级
 1. 列表推导式（List Comprehensions）
@@ -21,9 +21,13 @@
 
 二、流程控制完整体系（三大结构协作实现完整程序逻辑）
 
-1. 顺序结构 - 负责提供默认执行线。
-2. 分支结构 - 负责条件选择路径。
-3. 循环结构 - 负责重复执行代码。
+1. 顺序结构 - 负责提供默认执行线
+2. 分支结构 - 负责条件选择路径
+3. 循环结构 - 负责重复执行代码
+
+三、循环控制跳转语句
+     break - 终止循环
+     continue - 跳过本次循环
 
 :author: lingwh
 :date: 2026/6/15 10:43
@@ -143,44 +147,60 @@ print('-' * 20)
 data = [1, 2, 3, 4, 5]
 i = 0
 while i < len(data):
-    print(data[i])
+    print(data[i], end='\t')
     i += 1
+print()
+
 # 推荐：预先计算长度
 data = [1, 2, 3, 4, 5]
 n = len(data)
 i = 0
 while i < n:
-    print(data[i])
+    print(data[i], end='\t')
     i += 1
+print()
 print('-' * 20)
 
 # 使用 while 模拟 do-while 循环结构
-while True:
-    # do-while核心：先执行一次（至少显示1次菜单给用户）
-    print("\n" + "-"*30)
-    print("📚 学生管理系统 v1.0")
-    print("-"*30)
-    print("1. 新增学生信息")
-    print("2. 查询学生成绩")
-    print("3. 退出系统")
-    print("-"*30)
-    choice = input("请输入你的选择（1-3）：")
+# while True:
+#     # do-while核心：先执行一次（至少显示1次菜单给用户）
+#     print("\n" + "-"*30)
+#     print("📚 学生管理系统 v1.0")
+#     print("-"*30)
+#     print("1. 新增学生信息")
+#     print("2. 查询学生成绩")
+#     print("3. 退出系统")
+#     print("-"*30)
+#     choice = input("请输入你的选择（1-3）：")
+#
+#     # 执行业务逻辑
+#     match choice:
+#         case '1':
+#             print("\n  进入 [新增学生信息] 模块...")
+#             break
+#         case '2':
+#             print("\n 进入 [查询学生成绩] 模块...")
+#             break
+#         case "3":
+#             print("\n 退出系统，欢迎下次使用！")
+#             break
+#         case _:
+#             print("\n 输入错误，请输入1-3之间的选项！")
 
-    # 执行业务逻辑
-    match choice:
-        case '1':
-            print("\n  进入 [新增学生信息] 模块...")
-            break
-        case '2':
-            print("\n 进入 [查询学生成绩] 模块...")
-            break
-        case "3":
-            print("\n 退出系统，欢迎下次使用！")
-            break
-        case _:
-            print("\n 输入错误，请输入1-3之间的选项！")
+# 3. break 和 continue
+for i in range(5):
+    print(i, end='\t')
+    if i == 2:
+        break
+print()
 
+for i in range(5):
+    print(i, end='\t')
+    if i == 2:
+        continue
+print()
 
+print('-' * 20)
 """
     循环结构高级
 """
