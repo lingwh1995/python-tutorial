@@ -79,8 +79,33 @@ def print_multiplication_table() -> None:
         print("\t".join(line_parts))
 
 
+def count_student_number() -> None:
+    """报数字游戏
+
+    游戏规则
+    1. 健盘录入玩游戏的人数
+    2. 每个学生依次报数，遇到数字尾数是7或者数字是7的倍数时，就跳过
+    3。统计报数的学生一共有多少人
+
+    需求分析
+    统计指定区间内，尾数不为7或者不是7倍数的数字共有多少个
+
+    参考答案
+    50个学生，报数的人数为:39人
+    """
+    # num = eval(input('请输入玩游戏的总人数'))
+    num = int(input('请输入玩游戏的总人数'))
+    count = 0
+    for i in range(1, num + 1) :
+        if i % 10 == 7 or i % 7 == 0 :
+            continue
+        count += 1
+    print(f'一共 {num} 人，报数的人数为 {count} 人')
+
+
 if __name__ == '__main__':
     # guess_game()
     # get_total_while()
     # get_total_for()
-    print_multiplication_table()
+    # print_multiplication_table()
+    count_student_number();
