@@ -46,13 +46,29 @@
 # 定义变量 - 普通
 a = 1
 b = 3.14
-c = 'Hello Python!'
-d = "Python 程序员!"
+c = 'Hello Python! I\'am Java!'
+d = "Hello Python! I'am Java!"
 # 特殊的字符串定义格式第一种
 e = '''三个单引号包裹'''
 # 特殊的字符串定义格式第二种
 f = """三个双引号包裹"""
-g = True
+g = """
+select 
+    [distinct] 列1, 列2
+from 
+    表名
+where
+    组前筛选
+group by
+    分组字段
+having
+    组后筛选
+order by
+    排序字段 [ asc | desc ]
+limit
+    起始索引, 数据条数;            
+"""
+h = True
 
 # 打印变量 - 普通
 print(a)
@@ -61,6 +77,7 @@ print(c)
 print(d)
 print(e)
 print(f)
+print(h)
 print(g)
 print('-' * 20)
 
