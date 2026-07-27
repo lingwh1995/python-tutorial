@@ -32,12 +32,18 @@ def print_even_index_char(s) -> None:
     for i in range(0, len(s), 2):
         print(s[i])
 
-def judge_suffix(file_name, suffix) -> bool:
-    """判断字符串是否以指定后缀结尾"""
+def validate_suffix(file_name, suffix) -> bool:
+    """判断文件是否以指定后缀结尾
+
+    参数:
+        file_name: 完整文件名（如 'hello.txt'）
+        suffix: 文件扩展名（如 '.txt' 或 'txt'）
+
+    返回:
+        True 如果文件以指定后缀结尾，否则 False
+    """
     file_name_part = file_name.split('.')
-    if len(file_name_part) > 1 and file_name_part[-1] == suffix[1:]:
-        return True
-    return False
+    return len(file_name_part) > 1 and file_name_part[-1] == suffix.lstrip(".")
 
 if __name__ == '__main__':
     s_reverse = reverse_best(s)
@@ -47,5 +53,5 @@ if __name__ == '__main__':
     s_reverse = reverse_loop(s)
     print(s_reverse)
     print_even_index_char(s)
-    result = judge_suffix(file_name, '.txt')
+    result = validate_suffix(file_name, '.txt')
     print(result)
