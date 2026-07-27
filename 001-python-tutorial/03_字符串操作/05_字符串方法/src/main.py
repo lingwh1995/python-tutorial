@@ -151,6 +151,7 @@ show("'-'.join(fruits)", '-'.join(fruits))
 show("list(s_hello)", list(s_hello))
 show("'-'.join(s_hello).split('-')", '-'.join(s_hello).split('-'))
 
+
 # 7. 前缀与后缀判断
 #   startswith(prefix) 是否以 prefix 开头
 #   endswith(suffix)   是否以 suffix 结尾

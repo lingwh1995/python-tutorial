@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""python 中的字符串基础
+"""python 中的字符串定义
 
 1. 定义字符串的几种方式
 2. 字符串是不可变的，一旦定义，无法更改字符串的内容，操作该字符串后会返回一个新的字符串对象
@@ -9,12 +9,12 @@
 """
 
 # 定义字符串的几种方式
-a = '12345'
-b = "12345"
-c = '''12345'''
-d = """12345"""
+str_single = '12345' # 单引号 single
+str_double = "12345" # 双引号 double
+str_triple_single = '''12345''' # 三单引号 triple single
+str_triple_double = """12345"""  # 三双引号 triple double
 
-print(a)
-print(b)
-print(c)
-print(d)
+print(str_single)
+print(str_double)
+print(str_triple_single)
+print(str_triple_double)
