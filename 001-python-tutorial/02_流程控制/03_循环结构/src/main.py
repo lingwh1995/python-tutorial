@@ -64,9 +64,9 @@ for i in range(5):
     print(i)
 
 # 使用 range() - [2, 10)，步长为3
-# range(stop)              - 生成从 0 到 stop-1 的整数
-# range(start, stop)       - 生成从 start 到 stop-1 的整数
-# range(start, stop, step) - 生成从 start 到 stop-1，步长为 step 的整数
+# range(stop)              - 生成从 0 到 stop-1 的整数，返回值为 range 对象，使用 list(range(stop)) 转为列表
+# range(start, stop)       - 生成从 start 到 stop-1 的整数，返回值为 range 对象，使用 list(range(start, stop)) 转为列表
+# range(start, stop, step) - 生成从 start 到 stop-1，步长为 step 的整数，返回值为 range 对象，使用 list(range(start, stop, step)) 转为列表
 for i in range(2, 10, 3):
     print(i)
 print('-' * 20)

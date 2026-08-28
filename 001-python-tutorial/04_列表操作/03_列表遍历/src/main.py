@@ -6,37 +6,39 @@
 """
 
 
-s = [1, 2, 3, 4, 5]
+name_list = ['zhangsan', 'lisi', 'wangwu', 'zhaoliu', 'sunqi']
 # len()函数
-print('列表s的长度: %d' % len(s))
+print('列表 name_list 的长度: %d' % len(name_list))
 
 # 遍历列表，for-in 遍历
 def foreach_list_1() -> None:
-    for i in s:
-        print(i)
+    for name in name_list:
+        print(name)
     print('-' * 20)
 
 
 # 遍历列表，for-in + range() + len() 遍历
 def foreach_list_2() -> None:
-    for i in range(len(s)):
-        print(s[i])
+    # 注意： range(len(name_list)) 这里只计算一次
+    for i in range(len(name_list)):
+        print(name_list[i])
     print('-' * 20)
 
 
 # 遍历列表，while + len() 遍历
 def foreach_list_3() -> None:
+    length = len(name_list)
     i = 0
-    while i < len(s):
-        print(s[i])
+    while i < length:
+        print(name_list[i])
         i += 1
     print('-' * 20)
 
 
 # 遍历列表，for-in + enumerate() 遍历，同时获取下标和元素
 def foreach_list_4() -> None:
-    for index, value in enumerate(s):
-        print(f'下标{index}: 元素{value}')
+    for index, value in enumerate(name_list):
+        print(f'下标: {index}, 元素值: {value}')
     print('-' * 20)
 
 
