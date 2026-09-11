@@ -56,13 +56,13 @@ print(type(eval('22')))
 print(type(eval('True')))
 print('-' * 20)
 
-# 6. chr()
+# 6. chr(数字) -> 根据编码数字转回字符
 print(chr(48))
 print(chr(65))
 print(chr(97))
 print('-' * 20)
 
-# 7. ord()
+# 7. ord(字符) -> 获取字符对应的 Unicode 编码数字
 print(ord('0'))
 print(ord('A'))
 print(ord('a'))

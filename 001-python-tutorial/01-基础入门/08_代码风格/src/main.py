@@ -61,12 +61,12 @@ print('-' * 20)
 # 3. 字符串拼接列表
 items = ['Python', 'is', 'great']
 # 非 Pythonic：循环累加（低效且难看）
-s = ""
+s = ''
 for item in items:
-    s += item + " "
+    s += item + ' '
 
 # Pythonic：用 join
-s = " ".join(items)
+s = ' '.join(items)
 print('-' * 20)
 
 # 4. 文件读取
@@ -104,14 +104,14 @@ if not items:
 print('-' * 20)
 
 # 7. 多列表同时遍历
-a = [1, 2, 3]
-b = ['x', 'y', 'z']
+nums = [1, 2, 3]
+chs = ['a', 'b', 'c']
 # 非 Pythonic：用下标索引
-for i in range(len(a)):
-    print(a[i], b[i])
+for i in range(len(nums)):
+    print(nums[i], chs[i])
 
 # Pythonic：用 zip 打包
-for num, ch in zip(a, b):
+for num, ch in zip(nums, chs):
     print(num, ch)
 print('-' * 20)
 
@@ -123,7 +123,7 @@ for x in range(10):
         squares.append(x*x)
 print(squares)
 
-# Pythonic：列表推导式
+# Pythonic：列表推导式，即从一个推导式中推导出列表  [表达式 for 变量 in 可迭代对象 if 条件]
 squares = [x*x for x in range(10) if x % 2 == 0]
 print(squares)
 print('-' * 20)

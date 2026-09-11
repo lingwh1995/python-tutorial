@@ -90,11 +90,15 @@ from
 where 
     emp.name = 'zhangsan'
 """
+# 序列解包赋值
 x, y = 10, 20
+# 序列解包赋值实际应用示例
+age, name = 18, 'zhangsan'
 
 # 打印变量 - 高级
 print(sql)
 print(x, y)
+print(age, name)
 print('-' * 20)
 
 # 使用type()判断变量类型

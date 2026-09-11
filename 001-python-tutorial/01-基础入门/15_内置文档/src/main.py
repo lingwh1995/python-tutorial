@@ -46,7 +46,6 @@ def add(a, b):
 # 使用pydoc支持的格式进行注释 - 多行注释
 def calc_area(radius):
     """计算圆形面积
-
     :param radius: 圆半径
     :type radius: float
     :return: 面积值

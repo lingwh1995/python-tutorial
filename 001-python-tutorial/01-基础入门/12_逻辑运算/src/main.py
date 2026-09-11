@@ -58,6 +58,7 @@ print('-' * 20)
 0 or print('0 or  这行代码会被执行')
 print('-' * 20)
 
+# result = a or b，如果 a 为真，返回 a，如果 a 为假，返回 b
 # or 可以用来提供默认值，如果用户没有输入名字，使用 匿名用户 作为默认值
 # name = input('请输入你的名字：') or '匿名用户'
 # print(f"你好，{name}")
