@@ -162,22 +162,34 @@ show("lst_mod[1:3] = ['x','y','z']", lst_mod)
 print('\n--- 6. 排序：sort / sorted ---')
 
 lst_sort = [3, 1, 4, 1, 5, 9, 2, 6]
-show('lst_sort', lst_sort)
-show("sorted(lst_sort)", sorted(lst_sort, reverse=True))             # 不修改原列表
-show('lst_sort（sorted 后）', lst_sort)
-#lst_sort.sort()                # 原地升序排序
-#lst_sort.sort(reverse=True)    # 原地降序排序
-lst_sort.sort(reverse=False)    # 原地升序排序
-show('lst_sort（sort 后）', lst_sort)
+show('lst_sort（原）', lst_sort)
+
+# sorted() 是内置函数：返回排好序的新列表，原列表保持不变
+show("sorted(lst_sort)", sorted(lst_sort))                              # 默认升序
+show("sorted(lst_sort, reverse=True)", sorted(lst_sort, reverse=True))  # reverse=True 降序
+show('lst_sort（sorted 后，原列表未变）', lst_sort)
 print('-' * 3)
 
-lst_sort2 = [3, 1, 4, 2, 5]
-show("lst_sort2.sort(reverse=True)", (lst_sort2.sort(reverse=True), lst_sort2)[1])
-show('lst_str', lst_str)
+# sort() 是列表方法：原地排序，直接修改原列表，返回 None
+lst_sort.sort()                # 原地升序，等价于 sort(reverse=False)
+show("lst_sort.sort()", lst_sort)
+lst_sort.sort(reverse=True)    # 原地降序
+show("lst_sort.sort(reverse=True)", lst_sort)
+print('-' * 3)
 
+# 常见坑：sort() 返回 None，不能用变量接收排序结果，排序效果直接体现在原列表上
+lst_sort2 = [3, 1, 4, 2, 5]
+result = lst_sort2.sort()
+show("lst_sort2.sort() 的返回值", result)
+show('lst_sort2（sort 后）', lst_sort2)
+print('-' * 3)
+
+# key 参数：按「key 函数处理后的值」排序，原列表同样不受影响
 lst_sort3 = ['aaaaa', 'bbb', 'cc', 'd', 'eeeee']
-show("sorted(lst_sort3, key=len)", sorted(lst_sort3, key=len))
-show('lst_sort3', lst_sort3)
+show('lst_sort3（原）', lst_sort3)
+show("sorted(lst_sort3, key=len)", sorted(lst_sort3, key=len))                              # 按长度升序
+show("sorted(lst_sort3, key=len, reverse=True)", sorted(lst_sort3, key=len, reverse=True))  # 按长度降序
+show('lst_sort3（sorted 后，原列表未变）', lst_sort3)
 
 
 # 7. 反转
