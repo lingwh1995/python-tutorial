@@ -10,18 +10,18 @@ python 中的字符串索引分为正向索引和逆向索引
 """
 
 # 定义字符串的几种方式
-a = '12345'
-b = "12345"
-c = '''12345'''
-d = """12345"""
+s1 = '12345'
+s2 = "12345"
+s3 = '''12345'''
+s4 = """12345"""
 
 # 字符串的索引,使用下标访问字符串中每一个字符
-print(a[0])
-print(a[1])
-print(a[2])
+print(s1[0])
+print(s1[1])
+print(s1[2])
 print('-' * 20)
-print(a[-1])
-print(a[-2])
-print(a[-3])
+print(s1[-1])
+print(s1[-2])
+print(s1[-3])
 # 打印不存在的字串会报错， IndexError: string index out of ranget:
-# print(a[5])
+# print(s1[5])

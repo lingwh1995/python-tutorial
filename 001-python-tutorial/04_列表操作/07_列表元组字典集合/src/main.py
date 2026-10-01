@@ -14,21 +14,21 @@ def test_container() -> None:
         集合: {单值, 单值...}
     """
     # 定义一个列表
-    list_1 = [1, 2, 3]
+    lst = [1, 2, 3]
     # 定义一个元素
-    tuple_1 = (1, 2, 3)
+    tpl = (1, 2, 3)
     # 定义一个字典
-    dict_1 = {
+    d = {
         1: 'one',
         2: 'two',
     }
     # 定义一个集合
-    set_1 = {10, 20, 30, 40}
+    st = {10, 20, 30, 40}
 
-    print(f"list_1 = {list_1}, type(list_1) = {type(list_1)}")
-    print(f"tuple_1 = {tuple_1}, type(tuple_1) = {type(tuple_1)}")
-    print(f"dict_1 = {dict_1}, type(dict_1) = {type(dict_1)}")
-    print(f"set_1 = {set_1}, type(set_1) = {type(set_1)}")
+    print(f"lst = {lst}, type(lst) = {type(lst)}")
+    print(f"tpl = {tpl}, type(tpl) = {type(tpl)}")
+    print(f"d = {d}, type(d) = {type(d)}")
+    print(f"st = {st}, type(st) = {type(st)}")
 
 
 if __name__ == '__main__':

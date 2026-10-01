@@ -105,6 +105,7 @@ print('-' * 3)
 
 show("s.count('p')", s.count('p'))
 show("s.count('p', 0, 6)", s.count('p', 0, 6))
+show("s_words.count('python')", s_words.count('python'))
 
 
 # 5. 分割
@@ -119,6 +120,7 @@ print('\n--- 5. 分割：split / splitlines / partition ---')
 show('s_tab', s_tab)
 show('s_newline', s_newline)
 show('filename', filename)
+
 print('-' * 3)
 
 show("type(s_tab.split(','))", type(s_tab.split(',')))
@@ -128,6 +130,7 @@ show("s_tab.split('th')", s_tab.split('th'))     # 分隔符会被丢弃
 show("s_tab.split()", s_tab.split())             # 按任意空白分割
 show("s_newline.split('\\n')", s_newline.split('\n'))
 show("s_newline.splitlines()", s_newline.splitlines())
+show("len(s_words.split('python')) -1", len(s_words.split('python')) - 1) # 实现和 s_words.count('python') 一样的效果
 
 # partition 常用于拆分文件名
 show("s.partition('th')", s.partition('th'))

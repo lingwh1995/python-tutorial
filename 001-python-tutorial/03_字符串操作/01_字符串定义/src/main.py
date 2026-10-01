@@ -9,12 +9,12 @@
 """
 
 # 定义字符串的几种方式
-str_single = '12345' # 单引号 single
-str_double = "12345" # 双引号 double
-str_triple_single = '''12345''' # 三单引号 triple single
-str_triple_double = """12345"""  # 三双引号 triple double
+s_single = '12345'             # 单引号 single
+s_double = "12345"             # 双引号 double
+s_triple_single = '''12345'''  # 三单引号 triple single
+s_triple_double = """12345"""  # 三双引号 triple double
 
-print(str_single)
-print(str_double)
-print(str_triple_single)
-print(str_triple_double)
+print(s_single)
+print(s_double)
+print(s_triple_single)
+print(s_triple_double)

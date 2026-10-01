@@ -8,7 +8,7 @@
 
 s = '12345'
 # len()函数
-print('字符串s的长度: %d' % len(s))
+print('字符串 s 的长度: %d' % len(s))
 
 # 遍历字符串，for-in 遍历
 def foreach_str_1() -> None:

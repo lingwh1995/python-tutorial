@@ -6,8 +6,8 @@
 """
 
 
-s = [1, 2, 3, 4, 5]
-nums = [3, 1, 4, 1, 5, 9, 2, 6]
+lst = [1, 2, 3, 4, 5]
+lst_nums = [3, 1, 4, 1, 5, 9, 2, 6]
 
 
 # 推荐：切片写法，最简洁、最快
@@ -64,16 +64,16 @@ def deduplicate(lst) -> list:
 
 
 if __name__ == '__main__':
-    s_reverse = reverse_best(s)
-    print(s_reverse)
-    s_reverse = reverse_reversed(s)
-    print(s_reverse)
-    s_reverse = reverse_loop(s)
-    print(s_reverse)
-    print_even_index_elem(s)
-    result = judge_elem_in_list(s, 3)
+    lst_reverse = reverse_best(lst)
+    print(lst_reverse)
+    lst_reverse = reverse_reversed(lst)
+    print(lst_reverse)
+    lst_reverse = reverse_loop(lst)
+    print(lst_reverse)
+    print_even_index_elem(lst)
+    result = judge_elem_in_list(lst, 3)
     print(result)
-    print('排序前:', nums)
-    print('冒泡排序:', bubble_sort(nums[:]))
+    print('排序前:', lst_nums)
+    print('冒泡排序:', bubble_sort(lst_nums[:]))
     print('去重前:', [3, 1, 4, 1, 5, 9, 2, 6, 3])
     print('去重后:', deduplicate([3, 1, 4, 1, 5, 9, 2, 6, 3]))

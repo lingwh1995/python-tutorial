@@ -11,11 +11,11 @@
 # 注意区分：方法是「原地修改」，函数是「生成新对象」。
 
 # 示例数据
-s = [1, 2, 3, 4, 5]              # 基础示例列表
-s_dup = [1, 2, 2, 3, 3, 3, 4]    # 含重复元素
-s_str = ['apple', 'banana', 'cherry']
-s_nested = [[1, 2], [3, 4]]      # 嵌套列表
-s_mixed = [1, 'a', 2, 'b']       # 混合类型
+lst = [1, 2, 3, 4, 5]            # 基础示例列表
+lst_dup = [1, 2, 2, 3, 3, 3, 4]  # 含重复元素
+lst_str = ['apple', 'banana', 'cherry']
+lst_nested = [[1, 2], [3, 4]]    # 嵌套列表
+lst_mixed = [1, 'a', 2, 'b']     # 混合类型
 
 
 def show(title, result) -> None:
@@ -28,18 +28,18 @@ def show(title, result) -> None:
 # 1. 长度
 print('\n--- 1. 长度：len ---')
 
-show('s', s)
-show('s_dup', s_dup)
-show('s_str', s_str)
-show('s_nested', s_nested)
-show('s_mixed', s_mixed)
+show('lst', lst)
+show('lst_dup', lst_dup)
+show('lst_str', lst_str)
+show('lst_nested', lst_nested)
+show('lst_mixed', lst_mixed)
 print('-' * 3)
 
-show("len(s)", len(s))
-show("len(s_dup)", len(s_dup))
-show("len(s_str)", len(s_str))
-show("len(s_nested)", len(s_nested))
-show("len(s_mixed)", len(s_mixed))
+show("len(lst)", len(lst))
+show("len(lst_dup)", len(lst_dup))
+show("len(lst_str)", len(lst_str))
+show("len(lst_nested)", len(lst_nested))
+show("len(lst_mixed)", len(lst_mixed))
 
 
 # 2. 查找
@@ -48,91 +48,97 @@ show("len(s_mixed)", len(s_mixed))
 
 print('\n--- 2. 查找：index ---')
 
-show('s', s)
+show('lst', lst)
 print('-' * 3)
 
-show("s.index(3)", s.index(3))               # 元素 3 的索引
-show("s_dup.index(3)", s_dup.index(3))       # 第一个 3 的索引
+show("lst.index(3)", lst.index(3))               # 元index素 3 的索引
+show("lst_dup.index(3)", lst_dup.index(3))       # 第一个 3 的索引
 
 # index() 在找不到时会抛出 ValueError，演示如下
 try:
-    show("s.index(6)", s.index(6))
+    show("lst.index(6)", lst.index(6))
 except ValueError as e:
-    show("s.index(6)", f'ValueError: {e}')
+    show("lst.index(6)", f'ValueError: {e}')
 
-show("s.index(3, 0, 4)", s.index(3, 0, 4))   # 在切片 [0, 4) 中查找 3 的索引
+show("lst.index(3, 0, 4)", lst.index(3, 0, 4))   # 在切片 [0, 4) 中查找 3 的索引
 
 
 # 3. 添加
-#   append(x)     在末尾追加单个元素，原地修改，返回 None
-#   extend(iter)  在末尾追加可迭代对象的所有元素，原地修改，返回 None
+#   append(x)     把单个元素追加到当前列表末尾，原地修改，返回 None
+#   extend(iter)  可迭代对象里面的每一项追加到当前列表末尾，原地修改，返回 None
 #   insert(i, x)  在下标 i 处插入 x，原地修改，返回 None
 
 print('\n--- 3. 添加：append / extend / insert ---')
 
-s_append = [1, 2, 3]
-show('s_append（原）', s_append)
-s_append.append(4)
-show("s_append.append(4)", s_append)
-s_append.append([5, 6])   # append 会把列表作为一个整体追加
-show("s_append.append([5, 6])", s_append)
+lst_append = [1, 2, 3]
+show('lst_append（原）', lst_append)
+lst_append.append(4)
+show("lst_append.append(4)", lst_append)
+lst_append.append([5, 6])   # append 会把列表作为一个整体追加
+show("lst_append.append([5, 6])", lst_append)
 print('-' * 3)
 
-s_extend = [1, 2, 3]
-show('s_extend（原）', s_extend)
-s_extend.extend([4, 5, 6])   # extend 会把列表的每个元素逐一追加
-show("s_extend.extend([4, 5, 6])", s_extend)
-show("s_extend.extend('ab')", (s_extend.extend('ab'), s_extend)[1])
+lst_extend = [1, 2, 3]
+show('lst_extend（原）', lst_extend)
+lst_extend.extend([4, 5, 6])   # extend 会把列表的每个元素按顺序取出来逐一追加到后面
+show("lst_extend.extend([4, 5, 6])", lst_extend)
+show("lst_extend.extend('ab')", (lst_extend.extend('ab'), lst_extend)[1])
+lst_extend = ['apple', 'banana', 'cherry']
+lst_extend.extend(['tom', 'jerry'])
+show("lst_extend.extend(['tom', 'jerry'])", lst_extend)
+show("lst_extend.extend('kim')", (lst_extend.extend('kim'), lst_extend)[1])
 print('-' * 3)
 
-s_insert = [1, 2, 3]
-show('s_insert（原）', s_insert)
-s_insert.insert(1, 'x')   # 在下标 1 处插入 'x'
-show("s_insert.insert(1, 'x')", s_insert)
+lst_insert = [1, 2, 3]
+show('lst_insert（原）', lst_insert)
+lst_insert.insert(1, 'x')   # 正向索引：从左往右，在下标 1 处插入 'x'，如果索引超过列表长度，插入到列表中最后一个元素的位置
+show("lst_insert.insert(1, 'x')", lst_insert)
+lst_insert.insert(-1, 'y')  # 逆向索引：从右往左，在下标 1 处插入 'y'，如果索引超过列表长度，插入到列表中首个元素的位置
+show("lst_insert.insert(-1, 'y')", lst_insert)
 
 
 # 4. 删除
-#   remove(x)   删除第一个等于 x 的元素，找不到抛出 ValueError，原地修改
-#   pop()       删除并返回末尾元素（默认），pop(i) 删除并返回下标 i 的元素，原地修改
+#   remove(x)   根据元素值删除且不返回任何值，找不到抛出 ValueError，是原地修改
+#   pop(i)      根据索引删除并返回被删除的元素，不传索引会返回末尾元素，是原地修改
 #   clear()     清空列表，原地修改
-#   del lst[i]  语句，删除下标 i 的元素
-#   del lst[i:j] 语句，删除切片
+#   del lst[i]  根据索引删除元素不返回任何值，是原地修改
+#   del 列表名   语句，从内存中删除列表
 
 print('\n--- 4. 删除：remove / pop / clear / del ---')
 
-s_remove = [1, 2, 2, 3]
-show('s_remove（原）', s_remove)
-s_remove.remove(2)   # 只删除第一个 2
-show("s_remove.remove(2)", s_remove)
-show('s_remove（改后）', s_remove)
+lst_remove = [1, 2, 2, 3]
+show('lst_remove（原）', lst_remove)
+lst_remove.remove(2)   # 只删除第一个 2
+show("lst_remove.remove(2)", lst_remove)
+show('lst_remove（改后）', lst_remove)
 
 # remove() 在找不到时会抛出 ValueError
 try:
-    s_remove.remove(9)
+    lst_remove.remove(9)
 except ValueError as e:
-    show("s_remove.remove(9)", f'ValueError: {e}')
+    show("lst_remove.remove(9)", f'ValueError: {e}')
 print('-' * 3)
 
-s_pop = [1, 2, 3, 4]
-show('s_pop（原）', s_pop)
-show("s_pop.pop()", s_pop.pop())             # 删除并返回末尾元素
-show('s_pop（改后）', s_pop)
-show("s_pop.pop(0)", s_pop.pop(0))           # 删除并返回下标 0 的元素
-show('s_pop（改后）', s_pop)
+lst_pop = [1, 2, 3, 4]
+show('lst_pop（原）', lst_pop)
+show("lst_pop.pop()", lst_pop.pop())             # 删除并返回末尾元素
+show('lst_pop（改后）', lst_pop)
+show("lst_pop.pop(0)", lst_pop.pop(0))           # 删除并返回下标 0 的元素
+show('lst_pop（改后）', lst_pop)
 print('-' * 3)
 
-s_del = [1, 2, 3, 4, 5]
-show('s_del（原）', s_del)
-del s_del[0]
-show("del s_del[0]", s_del)
-del s_del[1:3]
-show("del s_del[1:3]", s_del)
+lst_del = [1, 2, 3, 4, 5]
+show('lst_del（原）', lst_del)
+del lst_del[0]
+show("del lst_del[0]", lst_del)
+del lst_del[1:3]
+show("del lst_del[1:3]", lst_del)
 print('-' * 3)
 
-s_clear = [1, 2, 3]
-show('s_clear（原）', s_clear)
-s_clear.clear()
-show("s_clear.clear()", s_clear)
+lst_clear = [1, 2, 3]
+show('lst_clear（原）', lst_clear)
+lst_clear.clear()
+show("lst_clear.clear()", lst_clear)
 
 
 # 5. 修改
@@ -141,33 +147,37 @@ show("s_clear.clear()", s_clear)
 
 print('\n--- 5. 修改：按下标 / 按切片 ---')
 
-s_mod = [1, 2, 3, 4, 5]
-show('s_mod（原）', s_mod)
-s_mod[0] = 'a'
-show("s_mod[0] = 'a'", s_mod)
-s_mod[1:3] = ['x', 'y', 'z']   # 切片修改，长度可不一致
-show("s_mod[1:3] = ['x','y','z']", s_mod)
+lst_mod = [1, 2, 3, 4, 5]
+show('lst_mod（原）', lst_mod)
+lst_mod[0] = 'a'
+show("lst_mod[0] = 'a'", lst_mod)
+lst_mod[1:3] = ['x', 'y', 'z']   # 切片修改，长度可不一致
+show("lst_mod[1:3] = ['x','y','z']", lst_mod)
 
 
 # 6. 排序
-#   sort(key=None, reverse=False)  原地排序，返回 None
-#   sorted(iter, key=None, reverse=False)  内置函数，返回新列表，不修改原列表
+# sort(key=None, reverse=False)          原地排序，会修改原列表，返回 None，reverse True -> 降序，False -> 升序
+# sorted(iter, key=None, reverse=False)  返回新列表，不修改原列表，reverse True -> 降序，False -> 升序
 
 print('\n--- 6. 排序：sort / sorted ---')
 
-s_sort = [3, 1, 4, 1, 5, 9, 2, 6]
-show('s_sort（原）', s_sort)
-show("sorted(s_sort)", sorted(s_sort))             # 不修改原列表
-show('s_sort（sorted 后）', s_sort)
-s_sort.sort()
-show("s_sort.sort()", s_sort)                      # 原地排序
-show('s_sort（sort 后）', s_sort)
+lst_sort = [3, 1, 4, 1, 5, 9, 2, 6]
+show('lst_sort', lst_sort)
+show("sorted(lst_sort)", sorted(lst_sort, reverse=True))             # 不修改原列表
+show('lst_sort（sorted 后）', lst_sort)
+#lst_sort.sort()                # 原地升序排序
+#lst_sort.sort(reverse=True)    # 原地降序排序
+lst_sort.sort(reverse=False)    # 原地升序排序
+show('lst_sort（sort 后）', lst_sort)
 print('-' * 3)
 
-s_sort2 = [3, 1, 4, 1, 5]
-show("s_sort2.sort(reverse=True)", (s_sort2.sort(reverse=True), s_sort2)[1])
-show('s_str', s_str)
-show("sorted(s_str, key=len)", sorted(s_str, key=len))
+lst_sort2 = [3, 1, 4, 2, 5]
+show("lst_sort2.sort(reverse=True)", (lst_sort2.sort(reverse=True), lst_sort2)[1])
+show('lst_str', lst_str)
+
+lst_sort3 = ['aaaaa', 'bbb', 'cc', 'd', 'eeeee']
+show("sorted(lst_sort3, key=len)", sorted(lst_sort3, key=len))
+show('lst_sort3', lst_sort3)
 
 
 # 7. 反转
@@ -176,13 +186,13 @@ show("sorted(s_str, key=len)", sorted(s_str, key=len))
 
 print('\n--- 7. 反转：reverse / reversed ---')
 
-s_rev = [1, 2, 3, 4, 5]
-show('s_rev（原）', s_rev)
-show("list(reversed(s_rev))", list(reversed(s_rev)))   # 不修改原列表
-show('s_rev（reversed 后）', s_rev)
-s_rev.reverse()
-show("s_rev.reverse()", s_rev)                          # 原地反转
-show('s_rev（reverse 后）', s_rev)
+lst_rev = [1, 2, 3, 4, 5]
+show('lst_rev（原）', lst_rev)
+show("list(reversed(lst_rev))", list(reversed(lst_rev)))   # 不修改原列表
+show('lst_rev（reversed 后）', lst_rev)
+lst_rev.reverse()
+show("lst_rev.reverse()", lst_rev)                          # 原地反转
+show('lst_rev（reverse 后）', lst_rev)
 
 
 # 8. 计数
@@ -190,12 +200,12 @@ show('s_rev（reverse 后）', s_rev)
 
 print('\n--- 8. 计数：count ---')
 
-show('s_dup', s_dup)
+show('lst_dup', lst_dup)
 print('-' * 3)
 
-show("s_dup.count(2)", s_dup.count(2))
-show("s_dup.count(3)", s_dup.count(3))
-show("s_dup.count(9)", s_dup.count(9))
+show("lst_dup.count(2)", lst_dup.count(2))
+show("lst_dup.count(3)", lst_dup.count(3))
+show("lst_dup.count(9)", lst_dup.count(9))
 
 
 # 9. 复制
@@ -205,18 +215,18 @@ show("s_dup.count(9)", s_dup.count(9))
 
 print('\n--- 9. 复制：copy / list() / 切片 ---')
 
-s_copy = [1, 2, [3, 4]]
-show('s_copy（原）', s_copy)
-s_copy1 = s_copy.copy()
-s_copy2 = list(s_copy)
-s_copy3 = s_copy[:]
-show("s_copy.copy()", s_copy1)
-show("list(s_copy)", s_copy2)
-show("s_copy[:]", s_copy3)
+lst_copy = [1, 2, [3, 4]]
+show('lst_copy（原）', lst_copy)
+lst_copy1 = lst_copy.copy()
+lst_copy2 = list(lst_copy)
+lst_copy3 = lst_copy[:]
+show("lst_copy.copy()", lst_copy1)
+show("list(lst_copy)", lst_copy2)
+show("lst_copy[:]", lst_copy3)
 # 浅拷贝：修改嵌套对象会影响原列表
-s_copy1[2].append(5)
-show("s_copy1[2].append(5) 后 s_copy", s_copy)      # 原列表也被改了
-show("s_copy1[2].append(5) 后 s_copy1", s_copy1)
+lst_copy1[2].append(5)
+show("lst_copy1[2].append(5) 后 lst_copy", lst_copy)      # 原列表也被改了
+show("lst_copy1[2].append(5) 后 lst_copy1", lst_copy1)
 
 
 # 10. 统计与成员判断
@@ -228,12 +238,12 @@ show("s_copy1[2].append(5) 后 s_copy1", s_copy1)
 
 print('\n--- 10. 统计与成员判断：sum / max / min / in ---')
 
-show('s', s)
+show('lst', lst)
 print('-' * 3)
 
-show("sum(s)", sum(s))
-show("max(s)", max(s))
-show("min(s)", min(s))
-show("3 in s", 3 in s)
-show("6 in s", 6 in s)
-show("6 not in s", 6 not in s)
+show("sum(lst)", sum(lst))
+show("max(lst)", max(lst))
+show("min(lst)", min(lst))
+show("3 in lst", 3 in lst)
+show("6 in lst", 6 in lst)
+show("6 not in lst", 6 not in lst)

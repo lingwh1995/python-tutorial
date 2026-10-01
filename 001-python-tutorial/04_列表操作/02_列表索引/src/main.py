@@ -10,18 +10,23 @@ python 中的列表索引分为正向索引和逆向索引
 """
 
 # 定义列表的几种方式
-a = [1, 2, 3, 4, 5]
-b = list('12345')
-c = [i for i in range(1, 6)]
-d = [0] * 5
+lst1 = [1, 2, 3, 4, 5]
+lst2 = list('12345')
+lst3 = [i for i in range(1, 6)]
+lst4 = [0] * 5
 
 # 列表的索引,使用下标访问列表中每一个元素
-print(a[0])
-print(a[1])
-print(a[2])
+print(lst1[0])
+print(lst1[1])
+print(lst1[2])
 print('-' * 20)
-print(a[-1])
-print(a[-2])
-print(a[-3])
+print(lst1[-1])
+print(lst1[-2])
+print(lst1[-3])
 # 打印不存在的元素会报错， IndexError: list index out of range
 # print(a[5])
+
+print(lst1)
+print(lst2)
+print(lst3)
+print(lst4)
