@@ -22,18 +22,18 @@ def show(title, result) -> None:
     """
         统一输出格式，让输入和结果一目了然。
     """
-    print(f'{title:<35} -> {result!r}')
+    print(f'{title:<40} -> {result!r}')
 
-
-# 1. 长度
-print('\n--- 1. 长度：len ---')
 
 show('lst', lst)
 show('lst_dup', lst_dup)
 show('lst_str', lst_str)
 show('lst_nested', lst_nested)
 show('lst_mixed', lst_mixed)
-print('-' * 3)
+
+
+# 1. 长度
+print('\n--- 1. 长度：len ---')
 
 show("len(lst)", len(lst))
 show("len(lst_dup)", len(lst_dup))
@@ -49,8 +49,6 @@ show("len(lst_mixed)", len(lst_mixed))
 print('\n--- 2. 查找：index ---')
 
 show('lst', lst)
-print('-' * 3)
-
 show("lst.index(3)", lst.index(3))               # 元index素 3 的索引
 show("lst_dup.index(3)", lst_dup.index(3))       # 第一个 3 的索引
 
@@ -71,7 +69,7 @@ show("lst.index(3, 0, 4)", lst.index(3, 0, 4))   # 在切片 [0, 4) 中查找 3 
 print('\n--- 3. 添加：append / extend / insert ---')
 
 lst_append = [1, 2, 3]
-show('lst_append（原）', lst_append)
+show('lst_append', lst_append)
 lst_append.append(4)
 show("lst_append.append(4)", lst_append)
 lst_append.append([5, 6])   # append 会把列表作为一个整体追加
@@ -79,8 +77,8 @@ show("lst_append.append([5, 6])", lst_append)
 print('-' * 3)
 
 lst_extend = [1, 2, 3]
-show('lst_extend（原）', lst_extend)
-lst_extend.extend([4, 5, 6])   # extend 会把列表的每个元素按顺序取出来逐一追加到后面
+show('lst_extend', lst_extend)
+lst_extend.extend([4, 5, 6])   # extend 如果是数组，会把列表的每个元素按顺序取出来逐一追加到列表最后面，如果是字符串，会把字符串拆分为多个字符逐一追加到列表最后面
 show("lst_extend.extend([4, 5, 6])", lst_extend)
 show("lst_extend.extend('ab')", (lst_extend.extend('ab'), lst_extend)[1])
 lst_extend = ['apple', 'banana', 'cherry']
@@ -90,7 +88,7 @@ show("lst_extend.extend('kim')", (lst_extend.extend('kim'), lst_extend)[1])
 print('-' * 3)
 
 lst_insert = [1, 2, 3]
-show('lst_insert（原）', lst_insert)
+show('lst_insert', lst_insert)
 lst_insert.insert(1, 'x')   # 正向索引：从左往右，在下标 1 处插入 'x'，如果索引超过列表长度，插入到列表中最后一个元素的位置
 show("lst_insert.insert(1, 'x')", lst_insert)
 lst_insert.insert(-1, 'y')  # 逆向索引：从右往左，在下标 1 处插入 'y'，如果索引超过列表长度，插入到列表中首个元素的位置
@@ -107,10 +105,10 @@ show("lst_insert.insert(-1, 'y')", lst_insert)
 print('\n--- 4. 删除：remove / pop / clear / del ---')
 
 lst_remove = [1, 2, 2, 3]
-show('lst_remove（原）', lst_remove)
+show('lst_remove', lst_remove)
 lst_remove.remove(2)   # 只删除第一个 2
 show("lst_remove.remove(2)", lst_remove)
-show('lst_remove（改后）', lst_remove)
+show('lst_remove', lst_remove)
 
 # remove() 在找不到时会抛出 ValueError
 try:
@@ -120,23 +118,23 @@ except ValueError as e:
 print('-' * 3)
 
 lst_pop = [1, 2, 3, 4]
-show('lst_pop（原）', lst_pop)
+show('lst_pop', lst_pop)
 show("lst_pop.pop()", lst_pop.pop())             # 删除并返回末尾元素
-show('lst_pop（改后）', lst_pop)
+show('lst_pop', lst_pop)
 show("lst_pop.pop(0)", lst_pop.pop(0))           # 删除并返回下标 0 的元素
-show('lst_pop（改后）', lst_pop)
+show('lst_pop', lst_pop)
 print('-' * 3)
 
 lst_del = [1, 2, 3, 4, 5]
-show('lst_del（原）', lst_del)
+show('lst_del', lst_del)
 del lst_del[0]
 show("del lst_del[0]", lst_del)
 del lst_del[1:3]
-show("del lst_del[1:3]", lst_del)
+show("del lst_del[1:3]", lst_del)               # 列表切片时左闭右开
 print('-' * 3)
 
 lst_clear = [1, 2, 3]
-show('lst_clear（原）', lst_clear)
+show('lst_clear', lst_clear)
 lst_clear.clear()
 show("lst_clear.clear()", lst_clear)
 
@@ -148,11 +146,11 @@ show("lst_clear.clear()", lst_clear)
 print('\n--- 5. 修改：按下标 / 按切片 ---')
 
 lst_mod = [1, 2, 3, 4, 5]
-show('lst_mod（原）', lst_mod)
+show('lst_mod', lst_mod)
 lst_mod[0] = 'a'
 show("lst_mod[0] = 'a'", lst_mod)
-lst_mod[1:3] = ['x', 'y', 'z']   # 切片修改，长度可不一致
-show("lst_mod[1:3] = ['x','y','z']", lst_mod)
+lst_mod[1:2] = ['x', 'y', 'z']   # 切片修改，长度可不一致
+show("lst_mod[1:2] = ['x','y','z']", lst_mod)
 
 
 # 6. 排序
@@ -162,34 +160,35 @@ show("lst_mod[1:3] = ['x','y','z']", lst_mod)
 print('\n--- 6. 排序：sort / sorted ---')
 
 lst_sort = [3, 1, 4, 1, 5, 9, 2, 6]
-show('lst_sort（原）', lst_sort)
+show('lst_sort', lst_sort)
 
 # sorted() 是内置函数：返回排好序的新列表，原列表保持不变
-show("sorted(lst_sort)", sorted(lst_sort))                              # 默认升序
-show("sorted(lst_sort, reverse=True)", sorted(lst_sort, reverse=True))  # reverse=True 降序
-show('lst_sort（sorted 后，原列表未变）', lst_sort)
+lst_sort_asc = sorted(lst_sort)
+show("sorted(lst_sort)", lst_sort_asc)                              # 默认升序
+lst_sort_desc = sorted(lst_sort, reverse=True)
+show("sorted(lst_sort, reverse=True)", lst_sort_desc)               # reverse=True 降序
+show('lst_sort', lst_sort)                                          # sorted 后，原列表未变
 print('-' * 3)
 
 # sort() 是列表方法：原地排序，直接修改原列表，返回 None
 lst_sort.sort()                # 原地升序，等价于 sort(reverse=False)
-show("lst_sort.sort()", lst_sort)
+show("lst_sort", lst_sort)
 lst_sort.sort(reverse=True)    # 原地降序
-show("lst_sort.sort(reverse=True)", lst_sort)
+show("lst_sort", lst_sort)
 print('-' * 3)
 
-# 常见坑：sort() 返回 None，不能用变量接收排序结果，排序效果直接体现在原列表上
-lst_sort2 = [3, 1, 4, 2, 5]
-result = lst_sort2.sort()
-show("lst_sort2.sort() 的返回值", result)
-show('lst_sort2（sort 后）', lst_sort2)
+# 常见坑：sort() 返回 None，不能用变量接收排序结果，排序效果直接体现在原列表上，是原地排序
+lst_sort = [3, 1, 4, 2, 5]
+show("lst_sort.sort()", lst_sort.sort())
+show('lst_sort', lst_sort)
 print('-' * 3)
 
 # key 参数：按「key 函数处理后的值」排序，原列表同样不受影响
-lst_sort3 = ['aaaaa', 'bbb', 'cc', 'd', 'eeeee']
-show('lst_sort3（原）', lst_sort3)
-show("sorted(lst_sort3, key=len)", sorted(lst_sort3, key=len))                              # 按长度升序
-show("sorted(lst_sort3, key=len, reverse=True)", sorted(lst_sort3, key=len, reverse=True))  # 按长度降序
-show('lst_sort3（sorted 后，原列表未变）', lst_sort3)
+lst_sort = ['aaaaa', 'bbb', 'cc', 'd', 'eeeee']
+show('lst_sort', lst_sort)
+show("sorted(lst_sort, key=len)", sorted(lst_sort, key=len))                              # 按长度升序
+show("sorted(lst_sort, key=len, reverse=True)", sorted(lst_sort, key=len, reverse=True))  # 按长度降序
+show('lst_sort', lst_sort)
 
 
 # 7. 反转
@@ -199,12 +198,12 @@ show('lst_sort3（sorted 后，原列表未变）', lst_sort3)
 print('\n--- 7. 反转：reverse / reversed ---')
 
 lst_rev = [1, 2, 3, 4, 5]
-show('lst_rev（原）', lst_rev)
+show('lst_rev', lst_rev)
 show("list(reversed(lst_rev))", list(reversed(lst_rev)))   # 不修改原列表
-show('lst_rev（reversed 后）', lst_rev)
+show('lst_rev', lst_rev)
 lst_rev.reverse()
 show("lst_rev.reverse()", lst_rev)                          # 原地反转
-show('lst_rev（reverse 后）', lst_rev)
+show('lst_rev', lst_rev)
 
 
 # 8. 计数
@@ -228,7 +227,7 @@ show("lst_dup.count(9)", lst_dup.count(9))
 print('\n--- 9. 复制：copy / list() / 切片 ---')
 
 lst_copy = [1, 2, [3, 4]]
-show('lst_copy（原）', lst_copy)
+show('lst_copy', lst_copy)
 lst_copy1 = lst_copy.copy()
 lst_copy2 = list(lst_copy)
 lst_copy3 = lst_copy[:]
@@ -237,8 +236,10 @@ show("list(lst_copy)", lst_copy2)
 show("lst_copy[:]", lst_copy3)
 # 浅拷贝：修改嵌套对象会影响原列表
 lst_copy1[2].append(5)
-show("lst_copy1[2].append(5) 后 lst_copy", lst_copy)      # 原列表也被改了
-show("lst_copy1[2].append(5) 后 lst_copy1", lst_copy1)
+show("lst_copy", lst_copy)      # 原列表也被改了
+show("lst_copy1", lst_copy1)
+show("lst_copy2", lst_copy2)
+show("lst_copy3", lst_copy3)
 
 
 # 10. 统计与成员判断

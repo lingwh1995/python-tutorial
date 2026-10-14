@@ -30,10 +30,10 @@ lst_multi_line = [                                     # 多行书写列表（�
     '4',
     '5'
 ]
-lst_empty_constructor = lst()                          # lst()构造器创建空列表
+lst_empty_constructor = list()                         # list()构造器创建空列表
 lst_empty_literal = []                                 # 字面量方式创建空列表，是 lst() 的语法糖
-lst_by_constructor_1 = lst('12345')                    # lst()构造器创建列表（列表中每个元素为字符串）
-lst_by_constructor_2 = lst(range(5))                   # lst()构造器创建列表（列表中每个元素为整数）
+lst_by_constructor_1 = list('12345')              # lst()构造器创建列表（列表中每个元素为字符串）
+lst_by_constructor_2 = list(range(5))             # lst()构造器创建列表（列表中每个元素为整数）
 lst_comprehension_int = [i for i in range(1, 6)]       # 列表推导式生成列表
 lst_comprehension_str = [str(i) for i in range(1, 6)]  # 列表推导式生成列表
 lst_concat = ['1'] + ['2', '3', '4', '5']              # 通过拼接运算生成新列表
