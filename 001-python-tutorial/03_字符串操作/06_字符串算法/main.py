@@ -6,50 +6,50 @@
 """
 
 
-def reverse_best(s: str) -> str:
+def reverse_best(src_str: str) -> str:
     """切片写法
     推荐使用，最简洁、最快
 
-    :param s: 待反转的字符串
+    :param src_str: 待反转的字符串
     :return: 反转后的新字符串
     """
-    return s[::-1]
+    return src_str[::-1]
 
 
-def reverse_join(s: str) -> str:
+def reverse_join(src_str: str) -> str:
     """列表拼接写法
     可读性好，适合教学，避免切片魔术语法
 
-    :param s: 待反转的字符串
+    :param src_str: 待反转的字符串
     :return: 反转后的新字符串
     """
-    return "".join(reversed(s))
+    return "".join(reversed(src_str))
 
 
-def reverse_loop(s: str) -> str:
+def reverse_loop(src_str: str) -> str:
     """循环写法
     可读性好，最好用 append() 替代 +=
 
-    :param s: 待反转的字符串
+    :param src_str: 待反转的字符串
     :return: 反转后的新字符串
     """
     chars = []
-    for i in range(len(s) - 1, -1, -1):
-        chars.append(s[i])
+    for i in range(len(src_str) - 1, -1, -1):
+        chars.append(src_str[i])
     return "".join(chars)
 
 
-def print_even_index_char(s: str) -> None:
+def print_even_index_char(src_str: str) -> None:
     """打印偶数索引的字符
 
-    :param s: 原始字符串
+    :param src_str: 原始字符串
     """
-    for i in range(0, len(s), 2):
-        print(s[i])
+    for i in range(0, len(src_str), 2):
+        print(src_str[i])
 
 
 def validate_suffix(file_name: str, suffix: str) -> bool:
-    """判断文件是否以指定后缀结尾
+    """判断文件名是否以指定后缀结尾
 
     :param file_name: 完整文件名（如 'hello.txt'）
     :param suffix: 文件扩展名（如 '.txt' 或 'txt'）
@@ -62,12 +62,17 @@ def validate_suffix(file_name: str, suffix: str) -> bool:
 if __name__ == '__main__':
     s = '12345'
     file_name = 'a.txt'
+
     s_reverse = reverse_best(s)
     print(s_reverse)
+
     s_reverse = reverse_join(s)
     print(s_reverse)
+
     s_reverse = reverse_loop(s)
     print(s_reverse)
+
     print_even_index_char(s)
-    validate_result = validate_suffix(file_name, ".txt")
+
+    validate_result = validate_suffix(file_name, '.txt')
     print(validate_result)
