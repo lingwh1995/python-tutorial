@@ -12,7 +12,7 @@ def string_lib_test() :
     # 大小写英文字母常量
     ascii_letters = string.ascii_letters
     print(ascii_letters)
-    # 数字0-9常量
+    # 数字 0-9 常量
     digits = string.digits
     print(digits)
     # 所有标点符号常量

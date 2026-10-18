@@ -15,16 +15,18 @@ age = 20
 if 18 <= age < 30:
     print('18 <= age < 30 这是python语言独有的链式的写法...')
 
-# 简单条件表达式中直接省略括号，其他语言中条件表达式必须写成 (age > 18)，python语言中直接使用 age > 18
-if (age > 18):
+# 简单条件表达式中直接省略括号，其他语言中条件表达式必须写成 (age > 18)，python 语言中直接使用 age > 18
+if age > 18:
     print("用户已经成年......")
 
 # 条件表达式使用括号的情况一： 多行条件需要续行时，使用括号包裹多行条件比用反斜杠 \ 续行更优雅
 has_discount = True
 score = 80
-if (18 <= age < 30
-        and has_discount
-        and score >= 60):
+if (
+    18 <= age < 30
+    and has_discount
+    and score >= 60
+):
     print("审核通过")
 
 # 条件表达式使用括号的情况二： 明确逻辑运算优先级

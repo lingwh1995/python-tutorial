@@ -20,7 +20,7 @@ lst_mixed = [1, 'a', 2, 'b']     # 混合类型
 
 def show(title, result) -> None:
     """
-        统一输出格式，让输入和结果一目了然。
+    统一输出格式，让输入和结果一目了然。
     """
     print(f'{title:<40} -> {result!r}')
 
@@ -45,6 +45,7 @@ show("len(lst_mixed)", len(lst_mixed))
 # 2. 查找
 #   index(x)       返回第一个等于 x 的元素索引，找不到抛出 ValueError
 #   index(x, i, j) 在切片 [i, j) 中查找 x 的索引
+#   index(x, i) 在切片 [i, 末尾] 中查找 x 的索引
 
 print('\n--- 2. 查找：index ---')
 
@@ -59,12 +60,13 @@ except ValueError as e:
     show("lst.index(6)", f'ValueError: {e}')
 
 show("lst.index(3, 0, 4)", lst.index(3, 0, 4))   # 在切片 [0, 4) 中查找 3 的索引
+show("lst.index(5, 0)", lst.index(5, 0))         # 在切片 [0, 末尾] 中查找 3 的索引
 
 
 # 3. 添加
-#   append(x)     把单个元素追加到当前列表末尾，原地修改，返回 None
-#   extend(iter)  可迭代对象里面的每一项追加到当前列表末尾，原地修改，返回 None
-#   insert(i, x)  在下标 i 处插入 x，原地修改，返回 None
+#   append(x)     再列表末尾提添加元素，单个值时和 extend() 效果一样，如果添加的是列表，则把列表整体当成一个元素添加进去，原地修改，返回 None
+#   extend(iter)  再列表末尾提添加元素，单个值时和 append() 效果一样，如果添加的是可迭代对象，则把可迭代对象中的每个元素逐一添加进去，原地修改，返回 None
+#   insert(i, x)  在下标 i 处插入 x，如果索引不存在，就默认往列表末尾插入，原地修改，返回 None
 
 print('\n--- 3. 添加：append / extend / insert ---')
 
@@ -78,13 +80,13 @@ print('-' * 3)
 
 lst_extend = [1, 2, 3]
 show('lst_extend', lst_extend)
-lst_extend.extend([4, 5, 6])   # extend 如果是数组，会把列表的每个元素按顺序取出来逐一追加到列表最后面，如果是字符串，会把字符串拆分为多个字符逐一追加到列表最后面
-show("lst_extend.extend([4, 5, 6])", lst_extend)
-show("lst_extend.extend('ab')", (lst_extend.extend('ab'), lst_extend)[1])
-lst_extend = ['apple', 'banana', 'cherry']
-lst_extend.extend(['tom', 'jerry'])
-show("lst_extend.extend(['tom', 'jerry'])", lst_extend)
-show("lst_extend.extend('kim')", (lst_extend.extend('kim'), lst_extend)[1])
+lst_extend.append(4)
+show("lst_extend.append(4)", lst_extend)
+lst_extend.extend([5, 6])   # extend 如果是数组，会把列表的每个元素按顺序取出来逐一追加到列表最后面，如果是字符串，会把字符串拆分为多个字符逐一追加到列表最后面
+show("lst_extend.extend([5, 6])", lst_extend)
+lst_extend.extend('python')
+show("lst_extend.extend('python') ", lst_extend)
+
 print('-' * 3)
 
 lst_insert = [1, 2, 3]
@@ -259,4 +261,5 @@ show("max(lst)", max(lst))
 show("min(lst)", min(lst))
 show("3 in lst", 3 in lst)
 show("6 in lst", 6 in lst)
+show("3 not in lst", 3 not in lst)
 show("6 not in lst", 6 not in lst)

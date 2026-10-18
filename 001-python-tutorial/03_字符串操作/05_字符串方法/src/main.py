@@ -22,9 +22,7 @@ s_hello = 'hello'
 
 
 def show(title, result) -> None:
-    """
-        统一输出格式，让输入和结果一目了然。
-    """
+    """统一输出格式，让输入和结果一目了然。"""
     print(f'{title:<35} -> {result!r}')
 
 

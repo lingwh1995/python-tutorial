@@ -12,7 +12,7 @@ def time_lib_test() -> None:
     # 时间戳
     timestamp = time.time()
     print(timestamp)
-    # 暂停2秒
+    # 暂停 2 秒
     time.sleep(2)
     print('hello')
 

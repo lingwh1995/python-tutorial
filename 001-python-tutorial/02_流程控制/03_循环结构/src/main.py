@@ -38,7 +38,7 @@ import psutil
 import os
 
 
-def get_rss_mb() -> None:
+def get_rss_mb() -> float:
     pid = os.getpid()
     mem = psutil.Process(pid).memory_info().rss
     return round(mem / 1024 / 1024, 2)

@@ -10,21 +10,27 @@ lst = [1, 2, 3, 4, 5]
 lst_nums = [3, 1, 4, 1, 5, 9, 2, 6]
 
 
-# 推荐：切片写法，最简洁、最快
 def reverse_best(lst) -> list:
-    """切片写法，最简洁、最快"""
+    """切片写法
+
+    最简洁、最快
+    """
     return lst[::-1]
 
 
-# 可读性也不错（适合教学，避免切片魔术语法）
 def reverse_reversed(lst) -> list:
-    """内置函数写法，可读性好"""
+    """内置函数写法
+
+    可读性也不错（适合教学，避免切片魔术语法）
+    """
     return list(reversed(lst))
 
 
-# 如果一定要用循环，用列表拼接替代 +=
 def reverse_loop(lst) -> list:
-    """循环写法，可读性好"""
+    """循环写法
+
+    可读性好，注意用 append() 替代 +=
+    """
     result = []
     for i in range(len(lst) - 1, -1, -1):
         result.append(lst[i])
@@ -71,8 +77,8 @@ if __name__ == '__main__':
     lst_reverse = reverse_loop(lst)
     print(lst_reverse)
     print_even_index_elem(lst)
-    result = judge_elem_in_list(lst, 3)
-    print(result)
+    judge_result = judge_elem_in_list(lst, 3)
+    print(judge_result)
     print('排序前:', lst_nums)
     print('冒泡排序:', bubble_sort(lst_nums[:]))
     print('去重前:', [3, 1, 4, 1, 5, 9, 2, 6, 3])

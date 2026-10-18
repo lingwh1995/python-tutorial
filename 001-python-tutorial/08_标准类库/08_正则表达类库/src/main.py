@@ -9,7 +9,7 @@ import re
 
 
 def re_lib_test() -> None:
-    # 提取数字 ['123','45']
+    # 提取数字 ['123', '45']
     res = re.findall(r"\d+", 'abc123def45')
     print(res)
     # 替换 → bbb

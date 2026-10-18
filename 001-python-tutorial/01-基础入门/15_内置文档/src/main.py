@@ -38,20 +38,18 @@ pydoc.help(math.sqrt)
 print('-' * 20)
 
 # 使用pydoc支持的格式进行注释 - 单行注释
-def add(a, b):
+def add(a: int, b: int) -> int:
     """两数相加"""
     return a + b
 
 
 # 使用pydoc支持的格式进行注释 - 多行注释
-def calc_area(radius):
+def calc_area(radius: float) -> float:
     """计算圆形面积
+
     :param radius: 圆半径
-    :type radius: float
     :return: 面积值
-    :rtype: float
     """
-    import math
     return math.pi * radius ** 2
 
 

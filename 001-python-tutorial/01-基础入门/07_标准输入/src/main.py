@@ -21,4 +21,4 @@
 user_name = input('请输入姓名: ')
 user_age =  int(input('请输入年龄: '))           # 注意这里的类型转换
 user_salary = float(input('请输入月薪: '))       # 注意这里的类型转换
-print(f'姓名：{user_name}，年龄：{user_age}， 年薪：{user_salary * 12:.2f}')
+print(f'姓名：{user_name}，年龄：{user_age}，年薪：{user_salary * 12:.2f}')

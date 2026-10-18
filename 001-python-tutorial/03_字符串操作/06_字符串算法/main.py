@@ -5,38 +5,51 @@
 :date: 2026/7/1 17:17
 """
 
-s = 'abcde'
+s = '12345'
 file_name = 'a.txt'
 
 
-# 推荐：切片写法，最简洁、最快
-def reverse_best(s) -> None:
-    """切片写法，最简洁、最快"""
+def reverse_best(s) -> str:
+    """切片写法
+
+    推荐使用，最简洁、最快
+    """
+    return s[::-1]
+
+def reverse_best(s) -> str:
+    """切片写法
+
+    推荐使用，最简洁、最快
+    """
     return s[::-1]
 
 
-# 可读性也不错（适合教学，避免切片魔术语法）
-def reverse_join(s) -> None:
-    """列表拼接写法，可读性好"""
+def reverse_join(s) -> str:
+    """列表拼接写法
+
+    可读性好，适合教学，避免切片魔术语法
+    """
     return "".join(reversed(s))
 
 
-# 如果一定要用循环，用列表拼接替代 +=
-def reverse_loop(s) -> None:
-    """循环写法，可读性好"""
+def reverse_loop(s) -> str:
+    """循环写法
+
+    可读性好，最好用 append() 替代 +=
+    """
     chars = []
     for i in range(len(s) - 1, -1, -1):
         chars.append(s[i])
     return "".join(chars)
 
 
-def print_even_index_char(s) -> None:
+def print_even_index_char(s) -> str:
     """打印偶数索引的字符"""
     for i in range(0, len(s), 2):
         print(s[i])
 
 
-def validate_suffix(file_name, suffix) -> bool:
+def validate_suffix(file_name, suffix) -> str:
     """判断文件是否以指定后缀结尾
 
     参数:
@@ -58,5 +71,5 @@ if __name__ == '__main__':
     s_reverse = reverse_loop(s)
     print(s_reverse)
     print_even_index_char(s)
-    result = validate_suffix(file_name, ".txt")
-    print(result)
+    validate_result = validate_suffix(file_name, ".txt")
+    print(validate_result)
