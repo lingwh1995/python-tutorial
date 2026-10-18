@@ -8,8 +8,8 @@
 
 def reverse_best(s: str) -> str:
     """切片写法
-
     推荐使用，最简洁、最快
+
     :param s: 待反转的字符串
     :return: 反转后的新字符串
     """
@@ -18,8 +18,8 @@ def reverse_best(s: str) -> str:
 
 def reverse_join(s: str) -> str:
     """列表拼接写法
-
     可读性好，适合教学，避免切片魔术语法
+
     :param s: 待反转的字符串
     :return: 反转后的新字符串
     """
@@ -28,8 +28,8 @@ def reverse_join(s: str) -> str:
 
 def reverse_loop(s: str) -> str:
     """循环写法
-
     可读性好，最好用 append() 替代 +=
+
     :param s: 待反转的字符串
     :return: 反转后的新字符串
     """
