@@ -6,47 +6,43 @@
 """
 
 
-def reverse_best(src_str: str) -> str:
+def reverse_best(source: str) -> str:
     """切片写法
     推荐使用，最简洁、最快
 
-    :param src_str: 待反转的字符串
+    :param source: 待反转的字符串
     :return: 反转后的新字符串
     """
-    return src_str[::-1]
+    return source[::-1]
 
-
-def reverse_join(src_str: str) -> str:
+def reverse_join(source: str) -> str:
     """列表拼接写法
     可读性好，适合教学，避免切片魔术语法
 
-    :param src_str: 待反转的字符串
+    :param source: 待反转的字符串
     :return: 反转后的新字符串
     """
-    return "".join(reversed(src_str))
+    return "".join(reversed(source))
 
-
-def reverse_loop(src_str: str) -> str:
+def reverse_loop(source: str) -> str:
     """循环写法
-    可读性好，最好用 append() 替代 +=
+    可读性好，使用 append() 构建字符列表
 
-    :param src_str: 待反转的字符串
+    :param source: 待反转的字符串
     :return: 反转后的新字符串
     """
     chars = []
-    for i in range(len(src_str) - 1, -1, -1):
-        chars.append(src_str[i])
+    for i in range(len(source) - 1, -1, -1):
+        chars.append(source[i])
     return "".join(chars)
 
-
-def print_even_index_char(src_str: str) -> None:
+def print_even_index_char(source: str) -> None:
     """打印偶数索引的字符
 
-    :param src_str: 原始字符串
+    :param source: 原始字符串
     """
-    for i in range(0, len(src_str), 2):
-        print(src_str[i])
-
+    for i in range(0, len(source), 2):
+        print(source[i])
 
 def validate_suffix(file_name: str, suffix: str) -> bool:
     """判断文件名是否以指定后缀结尾
@@ -58,21 +54,20 @@ def validate_suffix(file_name: str, suffix: str) -> bool:
     file_name_part = file_name.split('.')
     return len(file_name_part) > 1 and file_name_part[-1] == suffix.lstrip('.')
 
-
 if __name__ == '__main__':
     s = '12345'
-    file_name = 'a.txt'
+    filename = 'a.txt'
 
-    s_reverse = reverse_best(s)
-    print(s_reverse)
+    reversed_s = reverse_best(s)
+    print(reversed_s)
 
-    s_reverse = reverse_join(s)
-    print(s_reverse)
+    reversed_s = reverse_join(s)
+    print(reversed_s)
 
-    s_reverse = reverse_loop(s)
-    print(s_reverse)
+    reversed_s = reverse_loop(s)
+    print(reversed_s)
 
     print_even_index_char(s)
 
-    validate_result = validate_suffix(file_name, '.txt')
-    print(validate_result)
+    is_match = validate_suffix(filename, '.txt')
+    print(is_match)
