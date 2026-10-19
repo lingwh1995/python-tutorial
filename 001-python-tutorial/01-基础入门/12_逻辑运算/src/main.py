@@ -5,7 +5,7 @@
 :date: 2026/6/22 18:13
 """
 
-# 0为False，非0为True
+# 0 为 False，非 0 为 True
 if(0):
     print('输出这行说明 0 代表 True')
 else:
@@ -64,6 +64,6 @@ print('-' * 20)
 # print(f"你好，{name}")
 
 # 如果列表为空，使用默认列表
-my_list = []
-default_list = my_list or [1, 2, 3]
+empty_list = []
+default_list = empty_list or [1, 2, 3]
 print(default_list)

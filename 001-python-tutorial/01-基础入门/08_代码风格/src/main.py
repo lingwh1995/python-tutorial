@@ -46,7 +46,7 @@ print('a = %d, b = %d' % (a, b))
 print('-' * 20)
 
 # 2. 同时获取索引和值
-names = ['Alice', 'Bob', 'Charlie']
+names = ['alice', 'bob', 'candy']
 # 非 Pythonic：手动维护索引
 i = 0
 while i < len(names):
@@ -105,13 +105,13 @@ print('-' * 20)
 
 # 7. 多列表同时遍历
 nums = [1, 2, 3]
-chs = ['a', 'b', 'c']
+chars = ['a', 'b', 'c']
 # 非 Pythonic：用下标索引
 for i in range(len(nums)):
-    print(nums[i], chs[i])
+    print(nums[i], chars[i])
 
 # Pythonic：用 zip 打包
-for num, ch in zip(nums, chs):
+for num, ch in zip(nums, chars):
     print(num, ch)
 print('-' * 20)
 

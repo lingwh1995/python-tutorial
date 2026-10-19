@@ -10,15 +10,15 @@
 
 
 # 不带有提示的input()函数
-# s = input()
-# print(s)
+# user_input = input()
+# print(user_input)
 
 # 带有提示的input()函数
-#s = input('please input str:')
-#print(s)
+#user_input = input('please input str:')
+#print(v)
 
 # 一个简单的案例
-user_name = input('请输入姓名: ')
-user_age =  int(input('请输入年龄: '))           # 注意这里的类型转换
-user_salary = float(input('请输入月薪: '))       # 注意这里的类型转换
-print(f'姓名：{user_name}，年龄：{user_age}，年薪：{user_salary * 12:.2f}')
+name = input('请输入姓名: ')
+age =  int(input('请输入年龄: '))           # 注意这里的类型转换
+salary = float(input('请输入月薪: '))       # 注意这里的类型转换
+print(f'姓名：{name}，年龄：{age}，年薪：{salary * 12:.2f}')
