@@ -99,22 +99,22 @@ for index, fruit in enumerate(fruits):
 print('-' * 20)
 
 # zip - 并行遍历多个列表（遍历轮数由元素个数最少的列表决定）
-names = ['Alice', 'Bob', 'Candy']
+names = ['alice', 'bob', 'candy']
 scores = [90, 85, 68]
 for name, score in zip(names, scores):
     print(f'{name} 的分数是 {score}')
 print('-' * 20)
 
 # for-else 子句
-nums = [2,4,6,8]
+nums = [2, 4, 6, 8]
 target = 5
 
 for num in nums:
     if num == target:
-        print(f"找到数字{target}")
+        print(f"找到数字 {target}")
         break
 else:
-    print(f"列表里没有{target}")
+    print(f"列表里没有 {target}")
 print('-' * 20)
 
 
@@ -125,7 +125,7 @@ i = 1
 while i <= 100:
     total += i
     i += 1
-print("1到100的和:", total)
+print("1 到 100 的和:", total)
 print('-' * 20)
 
 # 验证用户输入的密码
@@ -144,19 +144,19 @@ print('-' * 20)
 
 # while循环 性能优化
 # 不推荐：每次循环都计算列表长度
-data = [1, 2, 3, 4, 5]
+nums = [1, 2, 3, 4, 5]
 i = 0
-while i < len(data):
-    print(data[i], end='\t')
+while i < len(nums):
+    print(nums[i], end='\t')
     i += 1
 print()
 
 # 推荐：预先计算长度
-data = [1, 2, 3, 4, 5]
-n = len(data)
+nums = [1, 2, 3, 4, 5]
+n = len(nums)
 i = 0
 while i < n:
-    print(data[i], end='\t')
+    print(nums[i], end='\t')
     i += 1
 print()
 print('-' * 20)
@@ -201,29 +201,30 @@ for i in range(5):
 print()
 
 print('-' * 20)
+
 """
-    循环结构高级
+循环结构高级
 """
 # 1. 列表推导式（List Comprehensions）
 # 不使用列表推导式
 squares = []
 for x in range(10):
-    squares.append(x*x)
+    squares.append(x * x)
 print(squares)
 
 # 使用列表推导式
-squares = [x*x for x in range(10)]
+squares = [x * x for x in range(10)]
 print(squares)
-even_squares = [x*x for x in range(10) if x % 2 == 0]
+even_squares = [x * x for x in range(10) if x % 2 == 0]
 print(even_squares)
 
 # 嵌套循环推导
-combinations = [m+n for m in ['A', 'B', 'C'] for n in ['X', 'Y', 'Z']]
+combinations = [m + n for m in ['A', 'B', 'C'] for n in ['X', 'Y', 'Z']]
 print(combinations)
 
 # 字典推导
 nums = [1, 2, 3, 4, 5]
-square_dict = {num: num*num for num in nums}
+square_dict = {num: num * num for num in nums}
 print(square_dict)
 
 # 解包推导

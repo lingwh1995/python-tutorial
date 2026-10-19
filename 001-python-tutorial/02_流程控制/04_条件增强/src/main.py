@@ -21,13 +21,14 @@ if age > 18:
 
 # 条件表达式使用括号的情况一： 多行条件需要续行时，使用括号包裹多行条件比用反斜杠 \ 续行更优雅
 has_discount = True
-score = 80
+# 积分
+points = 80
 if (
     18 <= age < 30
     and has_discount
-    and score >= 60
+    and points >= 60
 ):
-    print("审核通过")
+    print("积分兑换礼品审核通过")
 
 # 条件表达式使用括号的情况二： 明确逻辑运算优先级
 if (age < 18 or age >= 60) and has_discount:

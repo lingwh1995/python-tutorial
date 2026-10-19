@@ -41,13 +41,14 @@ print('-' * 20)
 
 # 3. 三元/三目运算符
 # I will walk if it is sunny else take a bus. 天晴我就走路，不然坐公交
+sunny = True
 res = 'walk' if sunny else 'bus'
 print(res)
 age = 16
 tip = '成年人' if age >= 18 else '未成年人'
 print(tip)
-i = 5
-tip = '偶数' if i % 2 == 0 else '奇数'
+num = 5
+tip = '偶数' if num % 2 == 0 else '奇数'
 print(tip)
 print('-' * 20)
 
