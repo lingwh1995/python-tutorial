@@ -4,19 +4,16 @@
 :author: lingwh
 :date: 2026/7/1 11:44
 """
-
 import random
 
 
 def guess_game() -> None:
     """石头剪刀布猜拳游戏
 
-    游戏规则:
+    游戏规则: 石头赢剪刀，剪刀赢布，布赢石头
     - 0: 石头
     - 1: 剪刀
     - 2: 布
-
-    石头赢剪刀，剪刀赢布，布赢石头
    """
     while True:
         while True:
@@ -25,11 +22,9 @@ def guess_game() -> None:
                 break
             print("您出错了，请重新出！")
         print('我方出的是: %d' % player_shoot)
-
         # 定义一个电脑变量，使用随机数获取状态
         robot_shoot = random.randint(0, 2)
         print('电脑出的是: %d' % robot_shoot)
-
         # 平局
         if player_shoot == robot_shoot:
             print('平局......')
@@ -59,16 +54,16 @@ def get_total_for() -> None:
     print(f"1~100累加和(for): {total}")
 
 
-def print_multiplication_table() -> None:
-    """打印99乘法表"""
+def print_multiplication_table_v1() -> None:
+    """打印99乘法表版本1"""
     for i in range(1, 10):
         for j in range(1, i + 1):
             print(f'{j} * {i} = {i * j}', end='\t')
         print('')
 
 
-def print_multiplication_table() -> None:
-    """打印左下三角 99 乘法表"""
+def print_multiplication_table_v2() -> None:
+    """打印左下三角 99 乘法表，列表拼接版本"""
     # 外层控制行数
     for row in range(1, 10):
         line_parts = []
@@ -83,7 +78,7 @@ def count_student_number() -> None:
     """报数字游戏
 
     游戏规则
-    1. 健盘录入玩游戏的人数
+    1. 键盘录入玩游戏的人数
     2. 每个学生依次报数，遇到数字尾数是7或者数字是7的倍数时，就跳过
     3. 统计报数的学生一共有多少人
 
@@ -96,8 +91,8 @@ def count_student_number() -> None:
     # num = eval(input('请输入玩游戏的总人数'))
     num = int(input('请输入玩游戏的总人数'))
     count = 0
-    for i in range(1, num + 1) :
-        if i % 10 == 7 or i % 7 == 0 :
+    for i in range(1, num + 1):
+        if i % 10 == 7 or i % 7 == 0:
             continue
         count += 1
     print(f'一共 {num} 人，报数的人数为 {count} 人')
@@ -107,5 +102,6 @@ if __name__ == '__main__':
     # guess_game()
     # get_total_while()
     # get_total_for()
-    # print_multiplication_table()
-    count_student_number();
+    # print_multiplication_table_v1()
+    # print_multiplication_table_v2()
+    count_student_number()

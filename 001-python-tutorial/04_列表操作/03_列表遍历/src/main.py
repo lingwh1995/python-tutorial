@@ -6,57 +6,49 @@
 """
 
 
-lst = ['a', 'b', 'c', 'd', 'e']
-# len()函数
-print('列表 lst 的长度: %d' % len(lst))
-
-
-def foreach_list_1() -> None:
+def foreach_list_1(source: list) -> None:
     """遍历列表
-
     for-in 遍历
     """
-    for value in lst:
+    for value in source:
         print(value)
     print('-' * 20)
 
 
-def foreach_list_2() -> None:
+def foreach_list_2(source: list) -> None:
     """遍历列表
-    
     for-in + range() + len() 遍历
     注意： range(len(lst)) 这里只计算一次
     """
-    for i in range(len(lst)):
-        print(lst[i])
+    for i in range(len(source)):
+        print(source[i])
     print('-' * 20)
 
 
-def foreach_list_3() -> None:
+def foreach_list_3(source: list) -> None:
     """遍历列表
-
     while + len() 遍历
     """
-    length = len(lst)
+    length = len(source)
     i = 0
     while i < length:
-        print(lst[i])
+        print(source[i])
         i += 1
     print('-' * 20)
 
 
-def foreach_list_4() -> None:
+def foreach_list_4(source: list) -> None:
     """遍历列表
-
     for-in + enumerate() 遍历，同时获取下标和元素
     """
-    for index, value in enumerate(lst):
+    for index, value in enumerate(source):
         print(f'下标: {index}, 元素值: {value}')
     print('-' * 20)
 
 
 if __name__ == '__main__':
-    foreach_list_1()
-    foreach_list_2()
-    foreach_list_3()
-    foreach_list_4()
+    chars = ['a', 'b', 'c', 'd', 'e']
+    foreach_list_1(chars)
+    foreach_list_2(chars)
+    foreach_list_3(chars)
+    foreach_list_4(chars)

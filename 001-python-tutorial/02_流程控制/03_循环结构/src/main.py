@@ -99,7 +99,7 @@ for index, fruit in enumerate(fruits):
 print('-' * 20)
 
 # zip - 并行遍历多个列表（遍历轮数由元素个数最少的列表决定）
-names = ['alice', 'bob', 'candy']
+names = ['Alice', 'Bob', 'Candy']
 scores = [90, 85, 68]
 for name, score in zip(names, scores):
     print(f'{name} 的分数是 {score}')

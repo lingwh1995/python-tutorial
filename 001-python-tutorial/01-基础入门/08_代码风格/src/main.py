@@ -46,7 +46,7 @@ print('a = %d, b = %d' % (a, b))
 print('-' * 20)
 
 # 2. 同时获取索引和值
-names = ['alice', 'bob', 'candy']
+names = ['Alice', 'Bob', 'Candy']
 # 非 Pythonic：手动维护索引
 i = 0
 while i < len(names):

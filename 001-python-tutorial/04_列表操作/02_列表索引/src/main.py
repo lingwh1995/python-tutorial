@@ -15,7 +15,7 @@ lst2 = list('12345')
 lst3 = [i for i in range(1, 6)]
 lst4 = [0] * 5
 
-# 列表的索引,使用下标访问列表中每一个元素
+# 使用索引访问列表中每一个元素
 print(lst1[0])
 print(lst1[1])
 print(lst1[2])
@@ -25,7 +25,12 @@ print(lst1[-2])
 print(lst1[-3])
 # 打印不存在的元素会报错， IndexError: list index out of range
 # print(a[5])
+print('-' * 3)
 
+# 使用索引修改列表中元素
+lst1[0] = 10
+
+# 打印列表
 print(lst1)
 print(lst2)
 print(lst3)

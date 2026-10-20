@@ -7,7 +7,7 @@
 
 
 def reverse_best(source) -> list:
-    """切片写法
+    """使用切片对列表进行反转
 
     最简洁、最快
     """
@@ -15,7 +15,7 @@ def reverse_best(source) -> list:
 
 
 def reverse_reversed(source) -> list:
-    """内置函数写法
+    """使用内置函数对列表进行反转
 
     可读性也不错（适合教学，避免切片魔术语法）
     """
@@ -23,7 +23,7 @@ def reverse_reversed(source) -> list:
 
 
 def reverse_loop(source) -> list:
-    """循环写法
+    """使用循环对列表进行反转
 
     可读性好，注意用 append() 替代 +=
     """

@@ -19,9 +19,25 @@ s4 = """12345"""
 print(s1[0])
 print(s1[1])
 print(s1[2])
-print('-' * 20)
+print('-' * 3)
 print(s1[-1])
 print(s1[-2])
 print(s1[-3])
 # 打印不存在的字串会报错， IndexError: string index out of ranget:
 # print(s1[5])
+print('-' * 3)
+
+# 使用索引修改字符串中字符会报错，字符串是不可变元素
+# TypeError: 'str' object does not support item assignment
+try:
+    s1[0] = 10
+except TypeError as e:
+    print(f'TypeError: {e}')
+print('-' * 3)
+
+
+# 打印字符串
+print(s1)
+print(s2)
+print(s3)
+print(s4)

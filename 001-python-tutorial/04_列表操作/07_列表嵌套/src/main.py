@@ -11,6 +11,7 @@
 @author lingwh
 @date 2026/10/19 9:58
 """
+import random
 
 
 def show(title, result) -> None:
@@ -33,9 +34,9 @@ students = [
 
 
 # 1. 创建嵌套列表
-# 字面量直接写、列表推导式按行生成
 print('\n--- 1. 创建嵌套列表 ---')
 
+# 字面量直接写、列表推导式按行生成
 show('matrix', matrix)
 show('students', students)
 # 普通元素和列表可以混着放
@@ -55,10 +56,10 @@ show('lst_good', lst_good)                      # 只有第一行变化
 
 
 # 2. 访问嵌套元素
-#   lst[i]      取出第 i 个元素（可能是内层列表）
-#   lst[i][j]   先取第 i 个内层列表，再取其中第 j 个元素，多级索引逐层深入
 print('\n--- 2. 访问嵌套元素 ---')
 
+# lst[i]      取出第 i 个元素（可能是内层列表）
+# lst[i][j]   先取第 i 个内层列表，再取其中第 j 个元素，多级索引逐层深入
 show('matrix', matrix)
 show('matrix[0]', matrix[0])                     # 第一行，拿到的是内层列表
 show('matrix[0][0]', matrix[0][0])               # 第一行第一列
@@ -78,7 +79,6 @@ except IndexError as e:
 
 
 # 3. 遍历嵌套列表
-#   双层 for 循环：外层遍历行，内层遍历行中的元素
 print('\n--- 3. 遍历嵌套列表 ---')
 
 for row in matrix:
@@ -86,6 +86,7 @@ for row in matrix:
 
 print('-' * 3)
 
+# 双层 for 循环：外层遍历行，内层遍历行中的元素
 for row in matrix:
     for ele in row:
         print(ele, end=' ')
@@ -104,8 +105,6 @@ for i, row in enumerate(matrix):
 
 
 # 4. 修改嵌套元素
-#   lst[i][j] = x   定位到内层列表再赋值
-#   lst[i] = [...]  也可以整行替换
 print('\n--- 4. 修改嵌套元素 ---')
 
 score_table = [
@@ -113,26 +112,27 @@ score_table = [
     ['Jerry', 88],
 ]
 show('score_table', score_table)
+# lst[i][j] = x   定位到内层列表再赋值
 score_table[0][1] = 95
 show('score_table[0][1] = 95', score_table)
-score_table[1] = ['Spike', 60]                   # 整行替换
+# lst[i] = [...]  可以替换整行
+score_table[1] = ['Spike', 60]
 show("score_table[1] = ['Spike', 60]", score_table)
 
 
 # 5. 嵌套列表的切片
-#   切片作用在外层：取出的是「行」，结果还是嵌套列表
-#   切片作用在内层：取出的是行中的「元素」
 print('\n--- 5. 嵌套列表的切片 ---')
 
 show('matrix', matrix)
+# 切片作用在外层：取出的是「行」，结果还是嵌套列表
 show('matrix[0:2]', matrix[0:2])                 # 前两行
 show('matrix[::-1]', matrix[::-1])               # 行序反转
+# 切片作用在内层：取出的是行中的「元素」
 show('matrix[0][0:2]', matrix[0][0:2])           # 第一行的前两个元素
 show('[row[0] for row in matrix]', [row[0] for row in matrix])   # 推导式取第一列
 
 
 # 6. 展平嵌套列表
-#   把二维列表拉平成一维列表
 print('\n--- 6. 展平嵌套列表 ---')
 
 show('matrix', matrix)
@@ -152,8 +152,7 @@ show('lst_flat', lst_flat)
 show('sum(matrix, [])', sum(matrix, []))
 
 
-# 7. 应用：矩阵转置
-#   官方教程经典例子：行列互换
+# 7. 应用：矩阵转置（行列互换）
 print('\n--- 7. 应用：矩阵转置 ---')
 
 show('matrix', matrix)
@@ -165,3 +164,14 @@ show('matrix_transpose', matrix_transpose)
 
 # zip(*matrix) 按列打包，效果相同
 show('zip(*matrix)', [list(row) for row in zip(*matrix)])
+
+
+# 8. 案例：随机分配办公室（将 8 个老师随机分配到 3 个教室）
+print('\n--- 8. 案例：随机分配办公室 ---')
+students = ['Tom', 'Jerry', 'Alice', 'Jack', 'Bob', 'John', 'David', 'Smith']
+classroom = [[], [], []]
+for student in students:
+    classroom_id = random.randint(0, len(classroom) - 1)
+    classroom[classroom_id].append(student)
+
+print(classroom)
