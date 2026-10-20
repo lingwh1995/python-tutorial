@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""python 中的元组用法
+"""python 中元组的用法
 
 @author lingwh
 @date 2026/10/14 15:29
