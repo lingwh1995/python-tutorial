@@ -6,8 +6,8 @@
 """
 
 
-def get_lucky_nums_v1() -> list:
-    """生成幸运数字v1
+def get_lucky_nums_by_loop() -> list:
+    """生成幸运数字（循环实现）
     使用循环实现：输入任意数字，并生成 1 到该数字的列表，如输入 15 时生成列表 [1, 2, 3, 4, 5, ... 15]，从中选取能被 6 整除的数放入新列表
     """
     while True:
@@ -26,8 +26,8 @@ def get_lucky_nums_v1() -> list:
     return lucky_nums
 
 
-def get_lucky_nums_v2() -> list:
-    """生成幸运数字v2
+def get_lucky_nums_by_comprehension() -> list:
+    """生成幸运数字（列表推导式实现）
     使用列表推导式实现：输入任意数字，并生成 1 到该数字的列表，如输入 15 时生成列表 [1, 2, 3, 4, 5, ... 15]，从中选取能被 6 整除的数放入新列表
     """
     while True:
@@ -42,8 +42,8 @@ def get_lucky_nums_v2() -> list:
 
 
 if __name__ == '__main__':
-    lucky_nums_v1 = get_lucky_nums_v1()
-    print(lucky_nums_v1)
+    lucky_nums_by_loop = get_lucky_nums_by_loop()
+    print(lucky_nums_by_loop)
 
-    lucky_nums_v2 = get_lucky_nums_v2()
-    print(lucky_nums_v2)
+    lucky_nums_by_comprehension = get_lucky_nums_by_comprehension()
+    print(lucky_nums_by_comprehension)
