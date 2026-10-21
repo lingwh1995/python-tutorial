@@ -26,9 +26,11 @@ def builtins_lib_test() -> None:
 
     # 可迭代对象 求和
     print(sum(nums))
+    print('-' * 3)
 
     # 获取列表长度
     print(len(nums))
+    print('-' * 3)
 
     # 类型转换
     i = 100
@@ -37,6 +39,7 @@ def builtins_lib_test() -> None:
     print(str(i))
     # 数字转字符串
     print(int(s))
+    print('-' * 3)
 
     # 生成整数序列
     # 格式 1：range (stop)
@@ -48,6 +51,7 @@ def builtins_lib_test() -> None:
     # 格式 3：range(start, stop, step)
     r = range(1, 9, 2)
     print(list(r))
+    print('-' * 3)
 
     # 转换可迭代对象
     # 元组 → 列表
@@ -62,6 +66,7 @@ def builtins_lib_test() -> None:
     # 生成器 -> 列表
     gen = (x * 2 for x in range(3))
     print(list(gen))
+    print('-' * 3)
 
     # 排序
     nums = [5, 9, 3, 1, 7]
@@ -73,6 +78,20 @@ def builtins_lib_test() -> None:
     print(desc)
     # 原列表不变
     print(nums)
+    print('-' * 3)
+
+    # 反转
+    # 原始
+    lst = [1, 2, 3, 4, 5]
+    t = (1, 2, 3, 4, 5)
+    # 反转
+    reverse_lst = list(reversed(lst))
+    print(reverse_lst)
+    reverse_t = tuple(reversed(t))
+    print(reverse_t)
+    # 原始不变
+    print(lst)
+    print(t)
 
 
 if __name__ == '__main__':
