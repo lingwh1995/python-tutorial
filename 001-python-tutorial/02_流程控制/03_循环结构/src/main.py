@@ -237,7 +237,7 @@ numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 result = [x for x in numbers if x > 5 and x % 2 != 0]
 print(result)
 
-# 生成前10个Fibonacci数
+# 生成前 10 个 Fibonacci 数字
 fib = [0, 1]
 [fib.append(fib[-1] + fib[-2]) for _ in range(8)]
 print(fib)
